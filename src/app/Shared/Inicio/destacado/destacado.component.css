@@ -1,0 +1,101 @@
+.titulo{
+    color: #FFF;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+  
+hr{
+    padding: 0;
+    margin: 0;
+    margin-bottom: .5rem;
+    width: 100%;
+    color: #FFF;
+    background: #FFF;
+    opacity: 1;
+    height: .1rem;
+}
+  
+.example-card {
+    max-width: 190px;
+    width: 100%;
+    display: grid;
+    align-self: center;
+}
+
+mat-card-header{
+    padding: 0;
+    margin: 0 auto;
+}
+  
+mat-card-title{
+    font-size: 1rem;
+    color: #c03241;
+    font-weight: 600;
+}
+  
+.caja{
+    width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+  
+.caja img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: .4rem;
+    margin: 0;
+    transition: all 1s;
+}
+  
+img:hover{
+    transform: scale(1.1);
+}
+  
+mat-card-content{
+    padding: .2rem .3rem;
+    margin: 0;
+}
+  
+mat-card-content p{
+    font-size: .7rem;
+    text-align: justify;
+    line-height: .8rem;
+    font-weight: 500;
+    padding-top: .3rem;
+}
+  
+mat-card-actions{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+}
+
+.btn{
+    padding: .3rem;
+    margin: 0;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover{
+    box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+}
+
+.btn:active{
+    transform: scale(.96);
+}
+  
+mat-icon{
+    font-size: 1.3rem;
+}
+  
+.titulo-dos{
+    color: var(--VerdeOscuro);
+}

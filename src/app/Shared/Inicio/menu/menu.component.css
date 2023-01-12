@@ -1,0 +1,152 @@
+.dropdown-menu{
+    background: var(--VerdeClaro);
+    border: none;
+}
+
+.dropdown-menu li a{
+    font-size: .8rem;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+.dropdown-menu li a{
+    background: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.BtnResponde{
+    color: white;
+}
+
+.navbar-toggler:hover{
+    border: 1px solid white;
+}
+
+.navbar{
+    background: var(--VerdeClaro);
+    padding: 0 3rem;
+}
+
+img{
+    width: 8rem;
+}
+
+button{
+    color: whitesmoke;
+    transition: .2s;
+}
+
+button:hover{
+    color: white;
+}
+
+.nav-link{
+    color: whitesmoke;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-link:hover, .dropdown-menu li a:hover{
+    color: white;
+}
+
+.nav-link:after, a:after {
+  display:block;
+  content: '';
+  border-bottom: solid 2px white;  
+  transform: scaleX(0);  
+  transition: transform 300ms ease-in-out;
+}
+
+.nav-link:after, .dropdown-menu li a:after{  
+    transform-origin:   0% 50%; 
+}
+
+.nav-link:hover:after, .dropdown-menu li a:hover:after{ 
+    transform: scaleX(1); 
+    transform-origin: 100% 50%; 
+}
+
+.dropdown-divider{
+    background: white;
+    height: .3rem;
+}
+
+.unete{
+    padding: 0 .1rem;
+    padding-left: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.unete:active{
+    background-color: white;
+    border: white;
+}
+
+.btn{
+    border: 1px solid white;
+    background: white;
+}
+
+.btn div{
+    color: var(--VerdeMedio);
+    font-size: .9rem;
+    text-transform: capitalize;
+}
+
+.uneteIcon:active{
+    background-color: white;
+    border: 1px solid white;
+}
+
+mat-icon{
+    color: var(--VerdeMedio);
+}
+
+@media (max-width:770px) {
+    .unete{
+        width: 35%;
+        margin-bottom: 1rem;
+    }
+
+    .dropdown-menu{
+        background: white;
+        width: 35%;
+        border: none;
+    }
+
+    .dropdown-divider{
+        background: white;
+        height: .1rem;
+    }
+
+    .dropdown-menu li a{
+        color: var(--VerdeMedio);
+    }
+
+    .dropdown-menu li a:hover{
+        color: var(--VerdeOscuro);
+    }
+
+    .unete div{
+        font-size: .8rem;
+    }
+}
+
+@media (max-width:550px) {    
+    .unete div{
+        font-size: .7rem;
+    }
+}
+
+@media (max-width:500px) {    
+    .unete div{
+        font-size: .6rem;
+    }
+}

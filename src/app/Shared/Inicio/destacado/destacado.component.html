@@ -1,0 +1,51 @@
+
+<mat-card-title class="text-center titulo">Destacados</mat-card-title><hr>
+<div class="container-fluid">
+    <mat-card class="example-card mb-3">
+        <mat-card-header>
+            <mat-card-title>¡Urgente!</mat-card-title>
+        </mat-card-header>
+        <div class="caja"> 
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        </div>
+        <mat-card-content>
+            <p>
+                Doby es un perro rescatado en Urdesa, ayudalo a sanar para que pueda vivir muchos años más.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button class="btn btn-outline-danger"
+                ngbPopover="Ayudar"		
+                [openDelay]="100"
+                [closeDelay]="100"
+                placement="left"
+                triggers="mouseenter:mouseleave">
+                <mat-icon>medical_services</mat-icon>
+            </button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title class="titulo-dos">Atención</mat-card-title>
+        </mat-card-header>
+        <div class="caja"> 
+            <img mat-card-image src="../../../../assets/img/Destacado/gato-crias.jpg">
+        </div>
+        <mat-card-content>
+            <p>
+                Nicolle acaba de dar a luz 3 Gatitos hermosos, tu puedes brindarle un hogar a cualquiera de estos gatitos.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button class="btn btn-outline-success"
+                ngbPopover="Me interesa"		
+                [openDelay]="100"
+                [closeDelay]="100"
+                placement="left"
+                triggers="mouseenter:mouseleave">
+                <mat-icon>volunteer_activism</mat-icon>
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,225 @@
+.container-fluid{
+    background: url("../../../../assets/img/Cumpleanios/cumpleanios-fondos.svg") no-repeat bottom;
+    background-size: cover;
+    animation: pan 5s infinite alternate-reverse;
+    padding-bottom: .5rem;
+}
+
+.card{
+    width: 100%;
+    height: 200px;
+    border: none;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+}
+
+.card, .card * {
+    box-sizing: border-box;
+    transition: 400ms;
+}
+
+.card-img img{
+    display: block;
+    width: 45%;
+    height: auto;
+}
+
+.card-title{
+    text-align: center;
+    margin-top: 8px;
+    color: var(--VerdeOscuro);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.card-content{
+    position: absolute;
+    right: 32px;
+    bottom: 35px;
+    left: 32px;
+    text-align: center;
+    color: var(--VerdeNormal);
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0;
+}
+
+.card:hover{
+    background-size: auto;
+}
+
+.card:hover .card-img{
+    transform: translateY(-40px);
+}
+
+.card:hover .card-img img{
+    transform: translate(-3px, -5px) rotate(-16deg) scale(1.3);
+}
+
+.card:hover .card-content{
+    opacity: 1;
+}
+
+.card:hover .card-title{
+    opacity: 0;
+}
+
+.caja-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caja-interna{
+    text-align: center;
+}
+
+.caja-interna h2{
+    margin-top: 8%;
+    font-size: 2.7rem;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.caja-interna p{
+    font-size: .9rem;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.caja-boton{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caja-interna .btn{
+    background: var(--VerdeClaro);
+    width: 20%;
+    color: white;
+    border: none;
+}
+
+.caja-interna .btn:hover{
+    background: var(--VerdeMedio);
+    border: none;
+    box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+}
+
+.caja-interna .btn:active{
+    background: var(--VerdeMedio);
+    transform: scale(.97);
+}
+
+@media screen and (max-width:1150px){
+
+    .caja-interna h2{
+        font-size: 2rem;
+    }
+    
+    .caja-interna p{
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width:980px){
+
+    .caja-interna h2{
+        font-size: 1.7rem;
+    }
+
+    
+    .card-img img{
+        width: 7rem;
+    }
+    
+    .card-content{
+        font-size: .9rem;
+        height: 5rem;
+        padding-bottom:3rem;
+    }
+
+    .card .card-content{
+        font-size: .7rem;
+    }
+}
+
+@media screen and (max-width:890px){
+
+    .caja-interna h2{
+        font-size: 1.6rem;
+    }
+    
+    .caja-interna p{
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 780px){
+
+    .container-fluid{
+        background: #FFF;
+        padding: 1rem;
+    }
+
+    .caja-interna h2{
+        font-size: 1.3rem;
+    }
+
+    .card-title{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .card-img img{
+        width: 6rem;
+    }
+
+    .card:hover .card-title{
+        opacity: 1;
+    }
+
+    .card:hover .card-content{
+        opacity: 0;
+    }
+
+    .card:hover .card-img{
+        transform: none;
+    }
+    
+    .card:hover .card-img img{
+        transform: none;
+    }
+
+    .btn{
+        padding: 0;
+        margin-bottom: .5rem;
+    }
+    
+}
+
+@media screen and (max-width:414px){
+
+    .caja-interna h2{
+        font-size: .8rem;
+    }
+    
+    .caja-interna p{
+        font-size: .5rem;
+    }
+}
+
+@keyframes pan {
+    100%{
+        background-position: 100% 60%;
+    }
+}

@@ -1,0 +1,74 @@
+.col{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card{
+    width: 100%;
+}
+
+.card-uno{
+    background: url("../../../../assets/img/Donacion/donacion-fondo-comida-inicio.svg") top no-repeat;
+    background-size: cover;
+    margin-right: .5rem;
+}
+
+.card-dos{
+    background: url("../../../../assets/img/Donacion/donacion-fondo-medicamento-inicio.svg") top no-repeat;
+    background-size: cover;
+    margin: 0 .5rem;
+}
+
+.card-tres{
+    background: url("../../../../assets/img/Donacion/donacion-fondo-monetario-inicio.svg") top no-repeat;
+    background-size: cover;
+    margin-left: .5rem;
+}
+
+.caja-img{
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+img{
+    width: 100%;
+    height: 8rem;
+    object-fit:cover;
+    
+    transition: all 1s;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+.card-text{
+    font-size: .8rem;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.boton{
+    text-align: center;
+    margin-bottom: .5rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline-success{
+    border: 1px solid var(--VerdeClaro);
+}
+
+.btn-outline-success:hover{
+    background-color: var(--VerdeMedio);
+    box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+}
+
+.btn:active{
+    transform: scale(.98);
+}

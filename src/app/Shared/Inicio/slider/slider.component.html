@@ -1,0 +1,46 @@
+<ngb-carousel class="w-100">
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img src="assets/img/Slider/Slider-Banner1.svg" class="w-100 caja-img "/>
+		</div>
+		<div class="carousel-caption carousel_uno">
+            <mat-icon 
+			ngbPopover="Infórmate"
+			[openDelay]="100"
+			[closeDelay]="100"
+			triggers="mouseenter:mouseleave">
+                link
+            </mat-icon>
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img src="assets/img/Slider/Slider-Banner2.svg" class="w-100 caja-img" />
+		</div>
+		<div class="carousel-caption carousel_dos">
+            <mat-icon
+			ngbPopover="Adopta"		
+			[openDelay]="100"
+			[closeDelay]="100"
+			placement="right"
+			triggers="mouseenter:mouseleave">
+				volunteer_activism
+			</mat-icon>
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img src="assets/img/Slider/Slider-Banner3.svg" class="w-100 caja-img" />
+		</div>
+		<div class="carousel-caption carousel_tres">
+            <mat-icon 
+				ngbPopover="Donaciones"		
+				[openDelay]="100"
+				[closeDelay]="100"
+				placement="left"
+				triggers="mouseenter:mouseleave">
+                favorite
+            </mat-icon>
+		</div>
+	</ng-template>
+</ngb-carousel>

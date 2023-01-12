@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-md fixed-top shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="['']">
+            <img src="assets/img/Logo/Logo-Blanco.png" alt="Logo-Blanco.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <mat-icon class="BtnResponde">pets</mat-icon>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" [routerLink]="['/adopcion']">Adopta</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="">Donaciones</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="">Reporta</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="">Boletines</a></li>
+                <li class="nav-item dropdown"><a class="nav-link" role="button">Nosotros</a>
+                    <ul class=" dropdown-menu shadow-sm">
+                        <li><a class="dropdown-item" href="#">¿Quiénes Somos?</a></li>
+                        <li><a class="dropdown-item" href="#">Contactanos</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Ubicación</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="unete btn">
+                <div>únete a nosotros</div>
+                <button class="btn uneteIcon">
+                    <mat-icon>diversity_2</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>

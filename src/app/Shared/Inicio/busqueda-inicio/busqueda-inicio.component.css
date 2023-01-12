@@ -1,0 +1,227 @@
+span{
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem;
+    color: #FFF;
+}
+
+h3{
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 1rem;
+    padding-top: 0;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+mat-form-field {
+    width: 95%;
+    margin-left: .5rem;
+}
+
+.nombre, .telefono, .recompensa {
+    height: 1.3rem;
+}
+
+::ng-deep .mat-form-field-infix{
+    margin-bottom: .2rem;
+}
+
+mat-icon, mat-datepicker-toggle{
+    color: black;
+    margin-right: .5rem;
+}
+
+mat-datepicker-toggle{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: black;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+    background: #FFF;
+    width: 100%;
+}
+
+.input-file{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.4rem ;
+    margin-left: 1rem;
+}
+
+.input-group .input-group-text, .form-control{
+    background: none;
+    border-radius: 0;
+    border: none;
+    font-size: .6rem;
+    border-bottom: 1px solid #506132;
+}
+
+.form-control:active{
+    border: none;
+}
+
+.icon-file{
+    margin: 0;
+    margin-right: .4rem;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    background: none;
+    border: 1px solid #333;
+    margin-bottom: .01rem;
+    color: #506132;
+    font-size: .9rem;
+    border-radius: 3px;
+}
+
+.caja-boton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    margin-top: 1.5rem;
+}
+
+button{
+    background: #FFF;
+}
+
+button:hover{
+    background: rgb(247, 245, 245);
+    box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+}
+
+.caja-boton .btn{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn .icono-form{
+    width: 100%;
+    height: 2rem;
+    font-size: 2rem;
+}
+
+.btn:active{
+    transform: scale(.98);
+    background: #FFF;
+    border: var(--VerdeMedio);
+}
+
+.caja-folleto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25rem;
+}
+
+.folleto{
+    animation: float 4.5s linear infinite;
+    background: url("../../../../assets/img/Busqueda/fondo-busqueda-folleto-inicio.svg") no-repeat;
+    background-size: cover;
+    background-position: unset;
+    width: 70%;
+    box-shadow: 3px 6px 0px 1px rgb(0, 0, 0);
+    -webkit-box-shadow: 2px 3px 0px 1px rgb(0, 0, 0);
+    -moz-box-shadow: 3px 3px 0px 1px rgb(0, 0, 0);
+    border: 1px solid black;
+    margin-top: .5rem;
+    padding: 1rem 0;
+}
+
+.title-folleto{
+    background: var(--VerdeMedio);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-self: center; 
+    margin: 0 auto;
+    margin-top: .5rem;
+    width: 90%;
+    padding: 0 1rem;
+    height: 15%;
+    box-shadow: 5px 6px 0px 1px rgb(0, 0, 0);
+    -webkit-box-shadow: 5px 6px 0px 1px rgb(0, 0, 0);
+    -moz-box-shadow: 5px 6px 0px 1px rgb(0, 0, 0);
+    border: 1px solid black;
+}
+
+p{
+    color: #FFF;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: monospace;
+    margin: 0;
+}
+
+.caja-folleto-cuerpo{
+    margin: 0;
+}
+
+.caja-folleto-descript{
+    text-align: justify;
+    font-weight: 500;
+    font-size: 90%;
+    padding: .5rem;
+}
+
+.card{
+    height: 100%;
+    max-height: 9rem;
+    background: url("../../../../assets/img/Cumpleanios/cumpleanio-cat.svg") no-repeat center;
+    background-size: cover;
+    box-shadow: 5px 6px 0px 1px rgb(0, 0, 0);
+    -webkit-box-shadow: 3px 4px 0px 1px rgb(0, 0, 0);
+    -moz-box-shadow: 4px 4px 0px 1px rgb(0, 0, 0);
+    border: 1px solid black;
+}
+
+.caja-folleto-informacion{
+    margin: 0 auto;
+}
+
+.caja-folleto-informacion .col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1rem;
+    border: 1px solid black;
+    margin: .5rem;
+    background-color: white;
+}
+
+.caja-folleto-informacion .col:hover{
+    box-shadow: 5px 6px 0px 1px rgb(0, 0, 0);
+    -webkit-box-shadow: 3px 4px 0px 1px rgb(0, 0, 0);
+    -moz-box-shadow: 4px 4px 0px 1px rgb(0, 0, 0);
+}
+
+.caja-folleto-informacion .col:hover,a:hover{
+    transform: scale(1.01);
+    box-shadow: 2px 3px 0px 1px rgb(0, 0, 0);
+    -webkit-box-shadow: 1px 2px 0px 1px rgb(0, 0, 0);
+    -moz-box-shadow: 2px 2px 0px 1px rgb(0, 0, 0);
+}
+
+
+
+@keyframes float {
+    0%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-1rem);
+    }
+}

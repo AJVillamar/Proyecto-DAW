@@ -1,0 +1,77 @@
+<div class="container-fluid w-auto d-flex justify-content-center align-items-start p-3 shadow m-4 rounded-4 bg-white">
+  <div class="container w-100">
+    <div class="w-100 text-center card border-0 shadow-sm mb-4">
+      <span class="h2 title w-100">Gestionar Animales</span>
+    </div>
+    <div class="card-content">
+      
+      <div class="caja">
+        <mat-form-field appearance="standard" class="w-75">
+          <mat-label>Filtro</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Buscar..." #input autocomplete="off">
+        </mat-form-field>
+        <button  class="btn btn-outline-success" matTooltip="Añadir" (click)="openAdd()">Nuevo</button>
+      </div>
+      
+      <div class="mat-elevation-z8" >
+        <table mat-table [dataSource]="dataSource" matSort>
+          <ng-container matColumnDef="nombre"> 
+            <th mat-header-cell *matHeaderCellDef mat-sort-header="nombre"> Nombre </th>
+              <td mat-cell *matCellDef="let row">
+                <div class="d-flex align-items-center">
+                  <img src="../../../../../assets/img/Perros/{{row.imagen}}" style="width: 40px; height: 40px" class="rounded-circle"/>
+                  <div class="ms-3">
+                    <p class="text-nombre-tabla mb-1">{{row.nombre}}</p>
+                  </div>
+                </div>
+            </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="raza">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header="raza"> Raza </th>
+            <td mat-cell *matCellDef="let row"> {{row.razaNombre}} </td>
+          </ng-container>
+      
+          <ng-container matColumnDef="sexo">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Sexo </th>
+            <td mat-cell *matCellDef="let row"> {{row.sexoNombre}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="estado">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
+            <td mat-cell *matCellDef="let row">
+              <span *ngIf="row.estadoNombre == 'Disponible'" class="badge text-bg-danger rounded-pill d-inline">Disponible</span>
+              <span *ngIf="row.estadoNombre == 'Esperando'" class="badge text-bg-warning rounded-pill d-inline">Esperando</span>
+              <span *ngIf="row.estadoNombre == 'Adoptado'" class="badge text-bg-success rounded-pill d-inline">Adoptado</span>
+            </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="acción">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="text-center"> Acción </th>
+            <td mat-cell *matCellDef="let row">
+              <div class="iconosContenedor">
+                <div class="btn btnIconAcciones btn-outline-primary">
+                  <mat-icon>search</mat-icon>
+                </div>
+                <div class="btn btnIconAcciones btn-outline-success">
+                  <mat-icon>edit</mat-icon>
+                </div>
+                <div class="btn btnIconAcciones btn-outline-danger">
+                  <mat-icon>delete</mat-icon>
+                </div>
+              </div>
+            </td>
+          </ng-container>
+          
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No hay datos que coincidan con el filtro "{{input.value}}"</td>
+          </tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>

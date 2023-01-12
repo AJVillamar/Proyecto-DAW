@@ -1,0 +1,117 @@
+.cabecera{
+  margin-bottom: 5rem;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background: url("../../../../assets/img/Administrador/admi-fondo-barra-lateral.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: url("../../../../assets/img/Administrador/admi-fondo-barra-superior.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.icon-menu mat-icon{
+  color: var(--VerdeOscuro);
+}
+
+mat-toolbar img{
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 1rem;
+}
+
+.mat-mdc-form-field + .mat-mdc-form-field {
+  margin-left: 8px;
+}
+
+mat-expansion-panel{
+  margin: .5rem;
+}
+
+mat-expansion-panel:hover{
+  box-shadow: 0px 2px 16px -1px rgba(0,0,0,0.77);
+  -webkit-box-shadow: 0px 2px 16px -1px rgba(0,0,0,0.77);
+  -moz-box-shadow: 0px 2px 16px -1px rgba(0,0,0,0.77);
+}
+
+.icono{
+  color: black;
+}
+
+.caja-nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mat-list-item{
+  font-size: .8rem;
+}
+
+i{
+  padding-right: .5rem;
+}
+
+.mat-expansion-panel-header.mat-expanded,
+.mat-expansion-panel-header.mat-expanded:hover,
+.mat-expansion-panel-header.mat-expanded:focus {
+  transition: all .5s;
+  background-color: var(--VerdeClaro);
+  margin: .2rem;
+}
+
+.nav-link:hover{
+  background-color: #FFF;
+}
+
+.nav-link:after, a:after {
+  display:block;
+  content: '';
+  border-bottom: solid 2px var(--VerdeOscuro);  
+  transform: scaleX(0);  
+  transition: transform 300ms ease-in-out;
+}
+
+.nav-link:after, .dropdown-menu li a:after{  
+    transform-origin:   0% 50%; 
+}
+
+.nav-link:hover:after, .dropdown-menu li a:hover:after{ 
+    transform: scaleX(1); 
+    transform-origin: 100% 50%; 
+}
+
+@media (max-width:957px){
+
+  .title-nav{
+    opacity: 0;
+  }
+
+  .mat-toolbar.mat-primary {
+    background: var(--VerdeClaro);
+  }
+
+  .icon-menu mat-icon{
+    color: #FFF;
+  }
+}

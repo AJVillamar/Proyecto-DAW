@@ -1,0 +1,145 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="cabecera">
+      <a [routerLink]="['/home']">
+        <img src="../../../../assets/img/Logo/Logo-Blanco.png">
+      </a>
+    </mat-toolbar>
+    <mat-nav-list>
+      <mat-accordion>
+
+        <!-- <mat-expansion-panel *ngIf="administrador.rol == 'admi';"> -->
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icono">engineering</mat-icon>
+            </mat-panel-title>
+            <mat-panel-description class="font-weight-bold">
+              <span class="text-dark">Managers</span>              
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <a mat-list-item class="nav-link">
+            <i class="fa-solid fa-users-viewfinder"></i>
+            Lista
+          </a>
+        </mat-expansion-panel>
+
+        <!-- <mat-expansion-panel *ngIf="administrador.rol == 'animales' || administrador.rol == 'admi';"> -->
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icono">pets</mat-icon>
+            </mat-panel-title>
+            <mat-panel-description class="font-weight-bold">
+              <span class="text-dark">Animales</span>              
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <a mat-list-item class="nav-link" routerLink="/admi-general/gestionar-animales">
+            <i class="fa-solid fa-dog"></i>
+            Gestionar
+          </a>
+          <a mat-list-item class="nav-link" routerLink="/admi-general/reporte-animales">
+            <i class="fa-solid fa-file"></i>
+            Reportes
+          </a>
+        </mat-expansion-panel>
+
+        <!-- <mat-expansion-panel *ngIf="administrador.rol == 'adopcion' || administrador.rol == 'admi';"> -->
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icono">volunteer_activism</mat-icon>
+            </mat-panel-title>
+            <mat-panel-description class="font-weight-bold">
+              <span class="text-dark opacity-100">Adopcion</span>              
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>This is the primary content of the panel.</p>
+        </mat-expansion-panel>
+
+        <!-- <mat-expansion-panel *ngIf="administrador.rol == 'donacion' || administrador.rol == 'admi';"> -->
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icono">cookie</mat-icon>
+            </mat-panel-title>
+            <mat-panel-description class="font-weight-bold">
+              <span class="text-dark opacity-100">Donacion</span>              
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>This is the primary content of the panel.</p>
+        </mat-expansion-panel>
+
+        <!-- <mat-expansion-panel *ngIf="administrador.rol == 'rescate' || administrador.rol == 'admi';"> -->
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icono">policy</mat-icon>
+            </mat-panel-title>
+            <mat-panel-description class="font-weight-bold">
+              <span class="text-dark opacity-100">Rescate</span>              
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>This is the primary content of the panel.</p>
+        </mat-expansion-panel>
+        
+        <mat-expansion-panel class="text-center">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icono">support_agent</mat-icon>
+            </mat-panel-title>
+            <mat-panel-description class="font-weight-bold">
+              <span class="text-dark opacity-100">¿Quiénes Somos?</span>              
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+
+      </mat-accordion>
+    </mat-nav-list>  
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="shadow-sm">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <div class="caja-nav">       
+        <!-- <span class="title-nav">Bienvenido {{administrador.nombres}} {{administrador.apellidos}}</span> -->
+        <span class="title-nav">Bienvenido</span>
+        <div class="caja-opciones">
+          <button class="icon-menu" mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon matTooltip="Opciones">more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon class="icono">account_circle</mat-icon>
+              <span>Perfil</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon class="icono">lock_reset</mat-icon>
+              <span>Contraseña</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon class="icono">logout</mat-icon>
+              <span>Salir</span>
+            </button>
+          </mat-menu>
+        </div>
+      </div> 
+
+    </mat-toolbar>
+    <div [@routeAnimations]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

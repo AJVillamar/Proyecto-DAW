@@ -1,0 +1,78 @@
+.form-login{
+    padding: 0 3rem;
+    background: url("../../../assets/img/Login/login-fondo.svg") no-repeat center;
+    background-size: cover;
+}
+
+i{
+    color: var(--VerdeOscuro);
+}
+
+span{
+    color: var(--VerdeOscuro);
+}
+
+h1{
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: var(--VerdeMedio);
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: var(--VerdeOscuro);
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: var(--VerdeOscuro);
+}
+
+.boton{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 3rem;
+}
+
+.btn-outline-success{
+    border: 1px solid var(--VerdeOscuro);
+}
+
+.btn-outline-success:hover{
+    border: none;
+    background-color: var(--VerdeOscuro);
+    box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+}
+
+.btn:active{
+    transform: scale(.98);
+}
+
+.recuperar{
+    color: #333;
+}
+
+.recuperar:hover{
+    color: black;
+}
+
+.cuenta{
+    font-size: .8rem;
+}
+
+.cuenta, .link{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cuenta a{
+    color: var(--VerdeOscuro);
+    font-weight: 600;
+}
+
+.cuenta a:hover{
+    color: black;
+}

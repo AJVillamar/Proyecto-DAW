@@ -1,0 +1,20 @@
+footer{
+    background: var(--VerdeClaro);
+}
+
+.encabezado{
+    font-weight: 500;
+}
+
+.section-uno i:hover{
+    color: white;
+}
+
+.section-dos .description{
+    font-size: .8rem;
+    text-align: justify;
+}
+
+.footer-final{
+    font-size: .7rem;
+}

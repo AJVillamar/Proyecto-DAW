@@ -1,0 +1,54 @@
+
+span{
+    text-align: center;
+    padding: 1.3rem;
+    font-size: 2.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;font-weight: bold;
+    color: #FFF;
+}
+
+.row-icon{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+mat-icon{
+    color: #FFF;
+    font-weight: bold;
+}
+
+.row-icon mat-icon{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    animation: float 5.5s linear infinite;
+}
+
+.row-descript{
+    display: grid;
+    align-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    font-weight: bold;
+    color: #FFF;
+    font-family: monospace;
+}
+
+img{
+    object-fit: cover;
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-.7rem);
+    }
+}

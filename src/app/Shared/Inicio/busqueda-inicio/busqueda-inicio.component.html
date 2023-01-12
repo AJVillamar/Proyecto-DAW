@@ -1,0 +1,116 @@
+<div class="container-fluid p-3">
+    <div class="row">
+        <div class="col-6">
+            <div class="row text-center">
+                <span>¿Se perdió tu mascota?</span>
+                <h3>¡Llena el formulario y compartelo en tus redes!</h3>
+            </div> 
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Nombre</mat-label>
+                        <input type="text" class="nombre" matInput autocomplete="off">
+                        <mat-icon matPrefix>pets</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="col calendario">
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Edad</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>                      
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Teléfono</mat-label>
+                        <input type="tel" class="telefono" matInput autocomplete="off">
+                        <mat-icon matPrefix>phone_iphone</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Recompensa</mat-label>
+                        <input type="text" class="recompensa" matInput autocomplete="off">
+                        <mat-icon matPrefix>attach_money</mat-icon>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Descripción</mat-label>
+                        <textarea matInput></textarea>
+                        <mat-icon matPrefix>pin_drop</mat-icon>
+                    </mat-form-field>
+                </div>      
+                <div class="col input-file">
+                    <div class="input-group">
+                        <label class="input-group-text p-1" for="inputGroupFile01">
+                            <mat-icon class="icon-file" matPrefix>upload_file</mat-icon>
+                        </label>
+                        <input type="file" class="form-control" id="inputGroupFile01">
+                    </div>                      
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="example-button-container text-center">
+                        <div class="caja-boton">
+                            <button class="btn">
+                                <mat-icon class="icono-form">check_circle</mat-icon>
+                            </button>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="col caja-folleto">
+            <div class="row folleto rounded h-100">
+                <div class="row rounded title-folleto mb-3">
+                    <p class="text-center">Soy Lucy tengo 3 años</p>
+                </div>
+                <div class="row caja-folleto-cuerpo mb-3">
+                    <div class="col folleto-imagen">
+                        <div class="card bg-white"></div>
+                    </div>
+                    <div class="col caja-folleto-descript bg-white rounded">
+                        Me estravié cerca de bellavista el lunes 15 de Diciembre a las 10:30, andaba con un collar rosado, una orejita la tengo lastimada.
+                    </div>
+                </div>
+                <div class="row caja-folleto-informacion text-center">
+                    <div class="col rounded">
+                        Si me encuentras llama al 0987654321.
+                    </div>
+                    <div class="col  rounded">
+                        Recompensa $100.
+                    </div>
+                </div>
+                <div class="row caja-folleto-cuerpo">
+                    <div class="col rounded mt-3">
+                        <footer class=" text-center ">
+                            <div class="container">
+                                <section>
+                                    <a class="btn text-white btn-floating m-1" style="background: #3b5998;">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a class="btn text-white btn-floating m-1" style="background: #55acee;">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>              
+                                    <a class="btn text-white btn-floating m-1" style="background: #ec5656;">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a class="btn text-white btn-floating m-1" style="background: #ee1010;">
+                                        <i class="fa-solid fa-download"></i>
+                                    </a>
+                                </section>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

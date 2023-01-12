@@ -1,0 +1,103 @@
+.container-fluid{
+    height: 82vh;
+}
+
+.title{
+	background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+	background-size: cover;
+	color: transparent;
+    padding-top: .2rem;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.caja{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: var(--VerdeOscuro);
+    font-weight: 500;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+    background: var(--VerdeMedio);
+    width: 100%;
+}
+
+.btn{
+    width: 20%;
+}
+
+.btn:active{
+    transform: scale(.98);
+}
+
+.btn-outline-success{
+    border: 1px solid var(--VerdeOscuro);
+}
+
+.btn-outline-success:hover{
+    background-color: var(--VerdeMedio);
+    border: 1px solid var(--VerdeMedio);
+    box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+}
+
+table {
+    width: 100%;
+}
+  
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+  
+td, th {
+    width: 20%;
+}
+
+th{
+    background: var(--VerdeClaro);
+    font-size: .9rem;
+    font-weight: 500;
+    color: #FFF;
+}
+
+.text-nombre-tabla {
+    font-weight: 500;
+}
+  
+.badge {
+    font-weight: 300;
+    padding: .5rem;
+}
+
+.btnIconAcciones{
+    width: 25%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+mat-icon{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconosContenedor{
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,46 @@
+<section class="vh-100">
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 text-black form-login">            
+                <div class="px-5 ms-xl-4">
+                    <i class="fa-solid fa-paw fa-2x me-3 pt-5 mt-xl-4"></i>
+                    <span class="h2 fw-bold mb-0">Fundación Refugio Pana</span>
+                </div>  
+                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">  
+                    <form style="width: 25rem;" [formGroup]="form" (ngSubmit)="ingresar()">
+                        <h1 class="mb-3 pb-3">Login</h1>
+                        <div class=" mb-3">
+                            <mat-form-field appearance="outline" class="w-75">
+                                <mat-label>Usuario</mat-label>
+                                <input type="text" matInput autocomplete="off" formControlName="usuario">
+                                <mat-icon matPrefix>person</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <div class="mb-5h">
+                            <mat-form-field appearance="outline" class="w-75">
+                                <mat-label>Contraseña</mat-label>
+                                <input type="password" matInput autocomplete="off" formControlName="password">
+                                <mat-icon matPrefix>lock</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <div class="pt-5 mb-4 boton">
+                            <button class="btn btn-outline-success w-75" type="submit">
+                                <mat-icon>login</mat-icon>    
+                            </button>
+                        </div>  
+                        <p class="small mb-5 pt-3 pb-lg-2">
+                            <a class="text-decoration-none recuperar" href="#!">¿Olvidaste la contraseña?</a>
+                        </p>
+                        <p class="cuenta">¿No tiene una cuenta? 
+                            <a href="#!" class="text-decoration-none">Regístrese aquí</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-6 px-0 d-none d-sm-block">
+                <img src="assets/img/Login/login-fondo-img.svg" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+            </div>
+        </div>
+    </div>
+</section>

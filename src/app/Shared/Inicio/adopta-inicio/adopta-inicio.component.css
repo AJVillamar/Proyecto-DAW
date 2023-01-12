@@ -1,0 +1,60 @@
+.container-fluid{
+    padding: 0;
+    margin: 0;
+}
+
+.card{
+    border: none;
+}
+
+img{
+    border-radius: 8px;
+}
+
+h1 {
+	background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+	background-size: cover;
+    height: 3.2rem;
+	color: transparent;
+    padding-top: .2rem;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+    font-size:3.2rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card-text{
+    font-size: 1rem;
+    font-weight: 600;
+    width: 75%;
+    color: #333;
+    font-family: monospace;
+}
+
+.card-cuerpo{
+    padding: 5rem;
+}
+
+.btn{
+    width: 25%;
+}
+
+.btn:active{
+    transform: scale(.98);
+}
+
+.btn-outline-success{
+    border: 1px solid var(--VerdeOscuro);
+}
+
+.btn-outline-success:hover{
+    background-color: var(--VerdeMedio);
+    border: 1px solid var(--VerdeMedio);
+    box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+}
+

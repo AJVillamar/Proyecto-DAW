@@ -1,0 +1,192 @@
+.caja-img{
+    border-radius: 8px;
+}
+
+mat-icon{
+    color: var(--VerdeOscuro);
+}
+
+.carousel_uno{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel_uno mat-icon{
+    color: var(--VerdeMedio);
+}
+
+.carousel_dos{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.carousel_tres{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 5%;
+}
+
+.carousel_uno mat-icon, .carousel_dos mat-icon, .carousel_tres mat-icon{
+    cursor: pointer;
+    height: 4rem;
+    width: 5rem;
+    font-size: 4rem;
+}
+
+::ng-deep.carousel-control-prev-icon{
+    background-image: url('https://apufpel.com.br/assets/img/seta_esq.png');
+}
+
+::ng-deep.carousel-control-next-icon{
+    background-image: url('https://apufpel.com.br/assets/img/seta_dir.png');
+}
+
+::ng-deep.carousel-indicators [data-bs-target]{
+    background-color: var(--VerdeOscuro);
+}
+
+
+@media screen and (max-width:1150px){
+
+    .carousel_uno mat-icon{
+        font-size: 3rem;
+        padding-top: 1.5rem;
+    }
+
+    .carousel_dos mat-icon{
+        font-size: 3rem;
+        padding-top: 1rem;
+    }
+
+    .carousel_tres mat-icon{
+        font-size: 3rem;
+        padding-top: 1rem;
+        padding-right: 2.5rem;
+    }
+
+    ::ng-deep.carousel-indicators{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:980px){
+
+    .carousel_uno mat-icon{
+        font-size: 2.5rem;
+        padding-top: 2rem;
+    }
+
+    .carousel_dos mat-icon{
+        font-size: 2.5rem;
+        padding-top: 1.5rem;
+        padding-left: 2.5rem;
+    }
+
+    .carousel_tres mat-icon{
+        font-size: 2.5rem;
+        padding-top: 1rem;
+        padding-right: 1.5rem;
+    }
+
+    ::ng-deep.carousel-indicators{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:890px){
+
+    .carousel_uno mat-icon{
+        font-size: 2rem;
+        padding-top: 2rem;
+    }
+
+    .carousel_dos, .carousel_tres{
+        height: 3rem;
+    }
+
+    .carousel_dos mat-icon{
+        font-size: 2rem;
+        padding-top: 1rem;
+        padding-left: 3rem;
+    }
+
+    .carousel_tres mat-icon{
+        font-size: 2rem;
+        padding-top: 2rem;
+        padding-right: 2rem;
+    }
+
+    ::ng-deep.carousel-indicators{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 780px){
+    ::ng-deep.carousel-control-prev-icon, ::ng-deep.carousel-control-next-icon{
+        background-image: none;
+    }
+    
+    .carousel_uno mat-icon{
+        font-size: 1.5rem;
+        padding-top: 2.5rem;
+    }
+
+    .carousel_dos mat-icon{
+        font-size: 1.5rem;
+        padding-top: 2rem;
+        padding-left: 3rem;
+    }
+
+    .carousel_tres mat-icon{
+        font-size: 1.5rem;
+        padding-top: 2rem;
+        padding-right: 2.5rem;
+    }
+
+    ::ng-deep.carousel-indicators{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:414px){
+
+    ::ng-deep.carousel-control-prev-icon, ::ng-deep.carousel-control-next-icon{
+        background-image: none;
+    }
+
+    .carousel_uno {
+        height: 4rem;
+    }
+
+    .carousel_uno mat-icon{
+        font-size: 1.2rem;
+        padding-top: 3.1rem;
+    }
+
+    .carousel_dos {
+        height: 3rem;
+    }
+
+    .carousel_dos mat-icon{
+        font-size: 1rem;
+        padding-top: 3rem;
+        padding-left: 4rem;
+    }
+
+    .carousel_tres {
+        height: 3rem;
+    }
+
+    .carousel_tres mat-icon{
+        font-size: 1rem;
+        padding-top: 2.5rem;
+        padding-right: 3.5rem;
+    }
+
+    ::ng-deep.carousel-indicators{
+        margin: 0;
+    }
+}
