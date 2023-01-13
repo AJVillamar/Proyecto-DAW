@@ -14,7 +14,9 @@
       </div>
       
       <div class="mat-elevation-z8" >
+        
         <table mat-table [dataSource]="dataSource" matSort>
+          
           <ng-container matColumnDef="nombre"> 
             <th mat-header-cell *matHeaderCellDef mat-sort-header="nombre"> Nombre </th>
               <td mat-cell *matCellDef="let row">
@@ -27,37 +29,37 @@
             </td>
           </ng-container>
         
-          <ng-container matColumnDef="raza">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header="raza"> Raza </th>
-            <td mat-cell *matCellDef="let row"> {{row.razaNombre}} </td>
+          <ng-container matColumnDef="raza"> 
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Raza </th>
+            <td mat-cell *matCellDef="let row"> {{row.raza}} </td>
           </ng-container>
       
           <ng-container matColumnDef="sexo">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Sexo </th>
-            <td mat-cell *matCellDef="let row"> {{row.sexoNombre}} </td>
+            <td mat-cell *matCellDef="let row"> {{row.sexo}} </td>
           </ng-container>
 
           <ng-container matColumnDef="estado">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
             <td mat-cell *matCellDef="let row">
-              <span *ngIf="row.estadoNombre == 'Disponible'" class="badge text-bg-danger rounded-pill d-inline">Disponible</span>
-              <span *ngIf="row.estadoNombre == 'Esperando'" class="badge text-bg-warning rounded-pill d-inline">Esperando</span>
-              <span *ngIf="row.estadoNombre == 'Adoptado'" class="badge text-bg-success rounded-pill d-inline">Adoptado</span>
+              <span *ngIf="row.estado == 'Disponible'" class="badge text-bg-danger rounded-pill d-inline">Disponible</span>
+              <span *ngIf="row.estado == 'Esperando'" class="badge text-bg-warning rounded-pill d-inline">Esperando</span>
+              <span *ngIf="row.estado == 'Adoptado'" class="badge text-bg-success rounded-pill d-inline">Adoptado</span>
             </td>
           </ng-container>
         
-          <ng-container matColumnDef="acción">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header class="text-center"> Acción </th>
+          <ng-container matColumnDef="accion">
+            <th mat-header-cell *matHeaderCellDef class="text-center"> Acción </th>
             <td mat-cell *matCellDef="let row">
               <div class="iconosContenedor">
                 <div class="btn btnIconAcciones btn-outline-primary">
                   <mat-icon>search</mat-icon>
                 </div>
-                <div class="btn btnIconAcciones btn-outline-success">
+                <div class="btn btnIconAcciones btn-outline-success" (click)="openEdit(row)">
                   <mat-icon>edit</mat-icon>
                 </div>
-                <div class="btn btnIconAcciones btn-outline-danger">
-                  <mat-icon>delete</mat-icon>
+                <div class="btn btnIconAcciones btn-outline-danger" [routerLink]="['']">
+                  <mat-icon>gpp_bad</mat-icon>
                 </div>
               </div>
             </td>
@@ -70,6 +72,7 @@
             <td class="mat-cell" colspan="4">No hay datos que coincidan con el filtro "{{input.value}}"</td>
           </tr>
         </table>
+
         <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
       </div>
     </div>

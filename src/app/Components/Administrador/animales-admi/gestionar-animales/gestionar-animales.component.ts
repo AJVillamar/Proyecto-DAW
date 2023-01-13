@@ -1,3 +1,4 @@
+import { ToastsService } from 'src/app/Services/toasts.service';
 import { MatDialog } from '@angular/material/dialog';
 import { IAnimal } from './../../../../Interfaces/IAnimal';
 import { MatSort } from '@angular/material/sort';
@@ -6,6 +7,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
 import { AnimalService } from 'src/app/Services/animal.service';
 import { AddAnimalComponent } from '../add-animal/add-animal.component';
+import { EditAnimalComponent } from '../edit-animal/edit-animal.component';
 
 @Component({
   selector: 'app-gestionar-animales',
@@ -19,14 +21,15 @@ export class GestionarAnimalesComponent implements OnInit, AfterViewInit{
 
   constructor(
     private _servicioAnimal: AnimalService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private toast: ToastsService
   ) { }
   
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource<IAnimal>(this._servicioAnimal.animal as IAnimal[]);
   }
   
-  displayedColumns: string[] = ['nombre', 'raza', 'sexo', 'estado', 'acción'];
+  displayedColumns: string[] = ['nombre', 'raza', 'sexo', 'estado', 'accion'];
   
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -56,9 +59,29 @@ export class GestionarAnimalesComponent implements OnInit, AfterViewInit{
     }).afterClosed().subscribe(
       (resultado) => {
         if(resultado == "éxito"){
-          console.log("jpla");
+          this.toast.exitoso('<strong>Felicidades</strong><br> El animal ha sido ingresado con éxito.');
           this.dataSource = new MatTableDataSource<IAnimal>(this._servicioAnimal.animal as IAnimal[]);
           this.dataSource.paginator = this.paginator;
+          this.dataSource.sort = this.sort;
+        }
+    });
+  }
+
+  openEdit(data: IAnimal){
+    this.dialog.open(EditAnimalComponent,{
+      autoFocus: false,
+      disableClose: true,
+      width: '50%',
+      data: {
+        data: data
+      }      
+    }).afterClosed().subscribe(
+      (resultado) => {
+        if(resultado == "éxito"){
+          this.toast.exitoso('<strong>Felicidades</strong><br> El animal ha sido ingresado con éxito.');
+          this.dataSource = new MatTableDataSource<IAnimal>(this._servicioAnimal.animal as IAnimal[]);
+          this.dataSource.paginator = this.paginator;
+          this.dataSource.sort = this.sort;
         }
     });
   }
