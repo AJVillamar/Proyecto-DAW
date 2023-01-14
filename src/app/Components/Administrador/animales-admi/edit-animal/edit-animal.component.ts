@@ -45,15 +45,12 @@ export class EditAnimalComponent implements OnInit {
         categoria: ['', Validators.required],
         sexo: ['', Validators.required],
         fechaNac: ['', Validators.required],
-        imagen: ['', Validators.required],
         observacion: ['', Validators.required],
       })
   }  
 
   onFileSelected(event: Event) {
     this.fileName = (event.target as HTMLInputElement).files?.[0].name
-    
-    console.log(this.fileName);
   }  
 
   ngOnInit(): void {        
@@ -69,12 +66,26 @@ export class EditAnimalComponent implements OnInit {
   }
 
   editarAnimal(){
-    console.log(this.form.value.fechaNac);
-    
     if(this.form.invalid){
       this.toast.error('<strong>Error</strong><br> Todos los campos son obligatorio.');
       return
     }
+
+    const animal: IAnimal = {
+      id: this.data.id,
+      imagen: this.fileName,
+      nombre: this.form.value.nombre,
+      raza: this.form.value.raza,
+      categoria: this.form.value.categoria,
+      fechaNac: moment(this.form.value.fechaNac).format("DD/MM/YYYY"),
+      fechaIng: new Date().toLocaleDateString(),
+      sexo: this.form.value.sexo,
+      estado: "Disponible",
+      observacion: this.form.value.observacion
+    }
+    
+    this._animalServicio.editarAnimal(animal);
+    this.dialogRef.close("actualizado");    
   }
 
 }

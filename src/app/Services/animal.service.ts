@@ -43,7 +43,7 @@ export class AnimalService {
   editarAnimal(updateAnimal: IAnimal){
     this.animal.forEach(elemento => {
       if(elemento.id == updateAnimal.id){
-        elemento.nombre == updateAnimal.nombre
+        elemento = updateAnimal        
       }
     });
   }

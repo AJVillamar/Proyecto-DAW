@@ -64,7 +64,7 @@
                     <label class="input-group-text p-1" for="inputGroupFile01">
                         <mat-icon class="icon-file" matPrefix>upload_file</mat-icon>
                     </label>
-                    <input type="file" class="form-control" id="inputGroupFile01" formControlName="imagen" (change)="onFileSelected($event)">
+                    <input type="file" class="form-control" id="inputGroupFile01" (change)="onFileSelected($event)">
                 </div>   
             </div>
         </div>
@@ -72,7 +72,7 @@
             <div class="col">
                 <mat-form-field appearance="legacy">
                     <mat-label>Descripción</mat-label>
-                    <textarea matInput formControlName="observacion" style="height: 4rem"></textarea>
+                    <textarea matInput formControlName="observacion"></textarea>
                     <mat-icon matPrefix>content_paste</mat-icon>
                 </mat-form-field>
             </div>

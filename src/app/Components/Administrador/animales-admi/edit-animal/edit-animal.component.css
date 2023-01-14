@@ -93,6 +93,11 @@ input[type=file]::-webkit-file-upload-button {
     background: var(--VerdeClaro);
 }
 
+textarea{
+    height: 3rem;
+    font-size: .7rem;
+}
+
 .btn{
     width: 50%;
 }
