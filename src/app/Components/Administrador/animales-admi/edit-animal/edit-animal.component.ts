@@ -84,7 +84,7 @@ export class EditAnimalComponent implements OnInit {
       observacion: this.form.value.observacion
     }
     
-    this._animalServicio.editarAnimal(animal);
+    this._animalServicio.editarAnimals(animal);
     this.dialogRef.close("actualizado");    
   }
 

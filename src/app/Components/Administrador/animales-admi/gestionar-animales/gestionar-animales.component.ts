@@ -74,8 +74,6 @@ export class GestionarAnimalesComponent implements OnInit, AfterViewInit{
     }).afterClosed().subscribe(
       (resultado) => {
         if(resultado == "actualizado"){
-          console.log("entré");
-          
           this.toast.exitoso('<strong>Felicidades</strong><br> El animal ha sido actualizado con éxito.');
           this.actualizar();
         }
@@ -84,5 +82,7 @@ export class GestionarAnimalesComponent implements OnInit, AfterViewInit{
 
   actualizar(){
     this.dataSource = new MatTableDataSource<IAnimal>(this._servicioAnimal.animal as IAnimal[]);
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 }

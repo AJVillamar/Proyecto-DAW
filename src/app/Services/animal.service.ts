@@ -40,13 +40,14 @@ export class AnimalService {
     this.animal.push(newAnimal);
   }
 
-  editarAnimal(updateAnimal: IAnimal){
+  editarAnimals(updateAnimals: IAnimal) {
     this.animal.forEach(elemento => {
-      if(elemento.id == updateAnimal.id){
-        elemento = updateAnimal        
+      if (elemento.id == updateAnimals.id) {
+        Object.assign(elemento, updateAnimals);
       }
     });
   }
+
 
   getAnimals(): IAnimal[] {
     return this.animal;
