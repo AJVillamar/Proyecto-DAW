@@ -90,8 +90,8 @@ export class GestionarAnimalesComponent implements OnInit, AfterViewInit{
       data: data      
     }).afterClosed().subscribe(
       (resultado) => {
-        if(resultado == "eliminado"){
-          this.toast.exitoso('<strong>Lo sentimos</strong><br> El animal ha cambiado su estado.');
+        if(resultado == "fallecido"){
+          this.toast.fallecido('<strong>Lo sentimos</strong><br> El animal ha cambiado su estado.');
           this.actualizar();
         }
     });

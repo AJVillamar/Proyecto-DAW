@@ -45,6 +45,7 @@
               <span *ngIf="row.estado == 'Disponible'" class="badge text-bg-danger rounded-pill d-inline">Disponible</span>
               <span *ngIf="row.estado == 'Esperando'" class="badge text-bg-warning rounded-pill d-inline">Esperando</span>
               <span *ngIf="row.estado == 'Adoptado'" class="badge text-bg-success rounded-pill d-inline">Adoptado</span>
+              <span *ngIf="row.estado == 'Fallecido'" class="badge text-bg-dark rounded-pill d-inline">Fallecido</span>
             </td>
           </ng-container>
         
@@ -55,10 +56,10 @@
                 <div class="btn btnIconAcciones btn-outline-primary" (click)="openInfo(row)">
                   <mat-icon>search</mat-icon>
                 </div>
-                <div class="btn btnIconAcciones btn-outline-success" (click)="openEdit(row)">
+                <div *ngIf="row.estado != 'Fallecido'" class="btn btnIconAcciones btn-outline-success" (click)="openEdit(row)">
                   <mat-icon>edit</mat-icon>
                 </div>
-                <div class="btn btnIconAcciones btn-outline-danger" (click)="openDelete(row)">
+                <div class="btn btnIconAcciones btn-outline-danger" (click)="openDelete(row)" [routerLink]="">
                   <mat-icon>gpp_bad</mat-icon>
                 </div>
               </div>

@@ -9,14 +9,15 @@
   <mat-divider></mat-divider>
 
   <mat-card-content>
-    <p class="primer">{{data.nombre}} fue encontrado en {{data.fechaIng}} y su estado para adopción está <strong>{{data.estado}}</strong>.</p>
+    <p class="primer" *ngIf="data.estado == 'Fallecido'">{{data.nombre}} fue encontrado en {{data.fechaIng}} lamentablemente Falleció el <strong>{{data.fechaFal}}</strong>.</p>
+    <p class="primer" *ngIf="data.estado != 'Fallecido'">{{data.nombre}} fue encontrado en {{data.fechaIng}} y su estado para adopción está <strong>{{data.estado}}</strong>.</p>
     <p>{{data.observacion}}</p>
   </mat-card-content>
 
   <mat-divider></mat-divider>
 
   <mat-card-actions>
-      <button class="btn btn-outline-success" type="submit" (click)="closeAnimal()">
+      <button class="btn btn-outline-success" type="submit" mat-dialog-close>
           <mat-icon class="btnAdd">arrow_back</mat-icon>
       </button>
   </mat-card-actions>

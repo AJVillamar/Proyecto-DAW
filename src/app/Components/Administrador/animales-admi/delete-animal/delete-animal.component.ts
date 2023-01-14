@@ -1,30 +1,44 @@
+import { MAT_DATE_FORMATS } from '@angular/material/core';
 import { IAnimal } from './../../../../Interfaces/IAnimal';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AnimalService } from './../../../../Services/animal.service';
 import { Component, Inject } from '@angular/core';
 import * as moment from 'moment';
 
+export const MY_DATE_FORMATS = {
+  parse: {
+    dateInput: 'DD/MM/YYYY',
+  },
+  display: {
+    dateInput: 'DD/MM/YYYY',
+    monthYearLabel: 'MMMM YYYYY',
+    dateA11yLabel: 'LL',
+    monthYearA11yLabel: 'MMMM YYYY'
+  }
+}
+
 @Component({
   selector: 'app-delete-animal',
   templateUrl: './delete-animal.component.html',
-  styleUrls: ['./delete-animal.component.css']
+  styleUrls: ['./delete-animal.component.css'],
+  providers: [
+    { provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMATS }
+  ]
 })
 export class DeleteAnimalComponent {
-  edad!: number;
+  fechaActual: string;
+
 
   constructor(
     private _animalServicio: AnimalService,
     private dialogRef: MatDialogRef<DeleteAnimalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: IAnimal) {this.calcularEdad(); }
+    @Inject(MAT_DIALOG_DATA) public data: IAnimal) {
+      this.fechaActual = new Date().toLocaleDateString()
+    }
 
-    calcularEdad() {
-      const hoy = moment();
-      const nacimiento = moment.utc(this.data.fechaNac, 'DD/MM/YYYY');
-      this.edad = hoy.diff(nacimiento, 'years');
-    } 
-
-    closeAnimal(){
-      this.dialogRef.close();
+    deleteAnimal(){
+      this._animalServicio.deleteAnimals(this.data.id!, this.fechaActual);
+      this.dialogRef.close("fallecido");    
     }
 
 }

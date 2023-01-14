@@ -1,1 +1,42 @@
-<p>delete-admi works!</p>
+<div class="card">
+    <div class="card-header">
+        <h2 class="card-title">Carta de defunción</h2>
+    </div>
+    <div class="card-body">
+        <div class="row text-center">
+            <div class="caja">
+                <img src="../../../../../assets/img/Perros/{{data.imagen}}">
+            </div>
+            <div class="col">
+                <p>
+                    Es con gran tristeza que informamos del fallecimiento de nuestro querido animal <strong>{{data.nombre}}</strong>, Fue un miembro valioso de nuestra familia y siempre será recordado con cariño.
+                </p>
+                <div class="row fechas">
+                    <div class="col-md-6">
+                        <h4>Fecha de nacimiento: {{data.fechaNac}}</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Fecha de fallecimiento: {{fechaActual}}</h4>
+                    </div>
+                </div>
+                <p class="footer-text">
+                    Por favor, únanse a nosotros en oración por el descanso eterno de nuestro amigo.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="row d-flex justify-content-around m-2">
+            <button class="btn btn-outline-danger" mat-dialog-close >
+                <span>
+                    Cancelar
+                </span>
+            </button>            
+            <button class="btn btn-outline-dark" (click)="deleteAnimal()" >
+                <span>
+                    Confirmar
+                </span>
+            </button>
+        </div>
+    </div>
+</div>

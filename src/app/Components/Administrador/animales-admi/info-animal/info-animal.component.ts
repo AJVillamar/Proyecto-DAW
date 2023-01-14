@@ -14,13 +14,7 @@ export class InfoAnimalComponent {
   edad!: number;
 
   constructor(
-    private _animalServicio: AnimalService,
-    private dialogRef: MatDialogRef<InfoAnimalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: IAnimal) {this.calcularEdad(); }
-
-  closeAnimal(){
-    this.dialogRef.close();
-  }
 
   calcularEdad() {
     const hoy = moment();

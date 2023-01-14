@@ -34,4 +34,13 @@ export class ToastsService {
       background: '#69AB3D'
     })
   }
+
+  fallecido(mensaje: string) {
+    this.notyf.success({
+      message: mensaje,
+      duration: 5000,
+      dismissible: true,
+      background: '#333'
+    })
+  }
 }

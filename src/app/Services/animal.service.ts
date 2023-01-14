@@ -42,12 +42,20 @@ export class AnimalService {
 
   editarAnimals(updateAnimals: IAnimal) {
     this.animal.forEach(elemento => {
-      if (elemento.id == updateAnimals.id) {
+      if (elemento.id === updateAnimals.id) {
         Object.assign(elemento, updateAnimals);
       }
     });
   }
 
+  deleteAnimals(id: number, fechaFal: string) {
+    this.animal.forEach(a => {
+      if (a.id === id) {
+        a.estado = "Fallecido";
+        a.fechaFal = fechaFal;
+      }
+    });    
+  }
 
   getAnimals(): IAnimal[] {
     return this.animal;
