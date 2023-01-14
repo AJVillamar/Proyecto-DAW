@@ -29,6 +29,7 @@ import { ReporteAnimalesComponent } from './Components/Administrador/animales-ad
 import { AddAnimalComponent } from './Components/Administrador/animales-admi/add-animal/add-animal.component';
 import { EditAnimalComponent } from './Components/Administrador/animales-admi/edit-animal/edit-animal.component';
 import { InfoAnimalComponent } from './Components/Administrador/animales-admi/info-animal/info-animal.component';
+import { DeleteAnimalComponent } from './Components/Administrador/animales-admi/delete-animal/delete-animal.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { InfoAnimalComponent } from './Components/Administrador/animales-admi/in
     ReporteAnimalesComponent,
     AddAnimalComponent,
     EditAnimalComponent,
-    InfoAnimalComponent
+    InfoAnimalComponent,
+    DeleteAnimalComponent
   ], 
   imports: [
     BrowserModule,

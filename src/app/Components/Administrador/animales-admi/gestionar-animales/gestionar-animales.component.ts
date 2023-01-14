@@ -9,6 +9,7 @@ import { AnimalService } from 'src/app/Services/animal.service';
 import { AddAnimalComponent } from '../add-animal/add-animal.component';
 import { EditAnimalComponent } from '../edit-animal/edit-animal.component';
 import { InfoAnimalComponent } from '../info-animal/info-animal.component';
+import { DeleteAnimalComponent } from '../delete-animal/delete-animal.component';
 
 @Component({
   selector: 'app-gestionar-animales',
@@ -76,6 +77,21 @@ export class GestionarAnimalesComponent implements OnInit, AfterViewInit{
       (resultado) => {
         if(resultado == "actualizado"){
           this.toast.exitoso('<strong>Felicidades</strong><br> El animal ha sido actualizado con éxito.');
+          this.actualizar();
+        }
+    });
+  }
+
+  openDelete(data: IAnimal){
+    this.dialog.open(DeleteAnimalComponent,{
+      autoFocus: false,
+      disableClose: true,
+      width: '50%',
+      data: data      
+    }).afterClosed().subscribe(
+      (resultado) => {
+        if(resultado == "eliminado"){
+          this.toast.exitoso('<strong>Lo sentimos</strong><br> El animal ha cambiado su estado.');
           this.actualizar();
         }
     });

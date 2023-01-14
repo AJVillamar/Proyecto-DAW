@@ -1,25 +1,24 @@
-<div class="card mb-3 h-100 w-100">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img
-          src="../../../../../assets/img/Perros/{{this.data.imagen}}"
-          alt="Trendy Pants and Shoes"
-          class="img-fluid rounded-start"
-        />
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-          </p>
-          <p class="card-text">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+<mat-card class="mb-2 h-100 w-100 shadow">
 
-  
+  <mat-card-header>
+    <img mat-card-avatar src="../../../../../assets/img/Perros/{{data.imagen}}" class="shadow-sm">
+    <mat-card-title>{{data.nombre}}</mat-card-title>
+    <mat-card-subtitle>{{data.raza}} de {{edad}} años</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-content>
+    <p class="primer">{{data.nombre}} fue encontrado en {{data.fechaIng}} y su estado para adopción está <strong>{{data.estado}}</strong>.</p>
+    <p>{{data.observacion}}</p>
+  </mat-card-content>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-actions>
+      <button class="btn btn-outline-success" type="submit" (click)="closeAnimal()">
+          <mat-icon class="btnAdd">arrow_back</mat-icon>
+      </button>
+  </mat-card-actions>
+
+</mat-card>
