@@ -8,6 +8,7 @@ import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
 import { AnimalService } from 'src/app/Services/animal.service';
 import { AddAnimalComponent } from '../add-animal/add-animal.component';
 import { EditAnimalComponent } from '../edit-animal/edit-animal.component';
+import { InfoAnimalComponent } from '../info-animal/info-animal.component';
 
 @Component({
   selector: 'app-gestionar-animales',
@@ -78,6 +79,15 @@ export class GestionarAnimalesComponent implements OnInit, AfterViewInit{
           this.actualizar();
         }
     });
+  }
+
+  openInfo(data: IAnimal){
+    this.dialog.open(InfoAnimalComponent,{
+      autoFocus: false,
+      disableClose: true,
+      width: '50%',
+      data: data      
+    })
   }
 
   actualizar(){

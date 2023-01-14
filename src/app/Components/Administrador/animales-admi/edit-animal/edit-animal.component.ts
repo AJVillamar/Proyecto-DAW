@@ -31,7 +31,6 @@ export const MY_DATE_FORMATS = {
 export class EditAnimalComponent implements OnInit {
   form: FormGroup;
   fileName!: any;
-  animalSetear!: IAnimal;
 
   constructor(
     private fb: FormBuilder,
