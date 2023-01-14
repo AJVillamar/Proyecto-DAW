@@ -28,6 +28,7 @@ import { GestionarAnimalesComponent } from './Components/Administrador/animales-
 import { ReporteAnimalesComponent } from './Components/Administrador/animales-admi/reporte-animales/reporte-animales.component';
 import { AddAnimalComponent } from './Components/Administrador/animales-admi/add-animal/add-animal.component';
 import { EditAnimalComponent } from './Components/Administrador/animales-admi/edit-animal/edit-animal.component';
+import { CrudRescatesComponent } from './Components/Administrador/animales-admi/crud-rescates/crud-rescates.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { EditAnimalComponent } from './Components/Administrador/animales-admi/ed
     GestionarAnimalesComponent,
     ReporteAnimalesComponent,
     AddAnimalComponent,
-    EditAnimalComponent
+    EditAnimalComponent,
+    CrudRescatesComponent
   ], 
   imports: [
     BrowserModule,
