@@ -60,9 +60,7 @@ export class GestionarAnimalesComponent implements OnInit, AfterViewInit{
       (resultado) => {
         if(resultado == "éxito"){
           this.toast.exitoso('<strong>Felicidades</strong><br> El animal ha sido ingresado con éxito.');
-          this.dataSource = new MatTableDataSource<IAnimal>(this._servicioAnimal.animal as IAnimal[]);
-          this.dataSource.paginator = this.paginator;
-          this.dataSource.sort = this.sort;
+          this.actualizar();
         }
     });
   }
@@ -72,17 +70,19 @@ export class GestionarAnimalesComponent implements OnInit, AfterViewInit{
       autoFocus: false,
       disableClose: true,
       width: '50%',
-      data: {
-        data: data
-      }      
+      data: data      
     }).afterClosed().subscribe(
       (resultado) => {
-        if(resultado == "éxito"){
-          this.toast.exitoso('<strong>Felicidades</strong><br> El animal ha sido ingresado con éxito.');
-          this.dataSource = new MatTableDataSource<IAnimal>(this._servicioAnimal.animal as IAnimal[]);
-          this.dataSource.paginator = this.paginator;
-          this.dataSource.sort = this.sort;
+        if(resultado == "actualizado"){
+          this.toast.exitoso('<strong>Felicidades</strong><br> El animal ha sido actualizado con éxito.');
+          this.actualizar();
         }
     });
+  }
+
+  actualizar(){
+    this.dataSource = new MatTableDataSource<IAnimal>(this._servicioAnimal.animal as IAnimal[]);
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 }

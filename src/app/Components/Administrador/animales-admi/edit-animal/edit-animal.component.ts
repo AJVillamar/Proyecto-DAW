@@ -19,7 +19,6 @@ export const MY_DATE_FORMATS = {
   }
 }
 
-
 @Component({
   selector: 'app-edit-animal',
   templateUrl: './edit-animal.component.html',
@@ -35,28 +34,58 @@ export class EditAnimalComponent implements OnInit {
   animalSetear!: IAnimal;
 
   constructor(
-    private _animalServicio: AnimalService,
+    private fb: FormBuilder,
     private toast: ToastsService,
+    private _animalServicio: AnimalService,
     private dialogRef: MatDialogRef<EditAnimalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: {data: IAnimal},
-    private fb: FormBuilder){
+    @Inject(MAT_DIALOG_DATA) public data: IAnimal){
       this.form = this.fb.group({
         nombre: ['', Validators.required],
         raza: ['', Validators.required],
-        tipo: ['', Validators.required],
+        categoria: ['', Validators.required],
         sexo: ['', Validators.required],
         fechaNac: ['', Validators.required],
-        imagen: ['', Validators.required],
         observacion: ['', Validators.required],
       })
   }  
 
   onFileSelected(event: Event) {
-    this.fileName = (event.target as HTMLInputElement).files?.[0]
+    this.fileName = (event.target as HTMLInputElement).files?.[0].name
   }  
 
-  ngOnInit(): void {
+  ngOnInit(): void {        
+    this.fileName = this.data.imagen;
+    this.form.patchValue({
+      nombre: this.data.nombre,
+      raza: this.data.raza,
+      categoria: this.data.categoria,
+      sexo: this.data.sexo,
+      fechaNac: moment(this.data.fechaNac, 'DD/MM/YYYY').toDate(),
+      observacion: this.data.observacion
+    })
+  }
+
+  editarAnimal(){
+    if(this.form.invalid){
+      this.toast.error('<strong>Error</strong><br> Todos los campos son obligatorio.');
+      return
+    }
+
+    const animal: IAnimal = {
+      id: this.data.id,
+      imagen: this.fileName,
+      nombre: this.form.value.nombre,
+      raza: this.form.value.raza,
+      categoria: this.form.value.categoria,
+      fechaNac: moment(this.form.value.fechaNac).format("DD/MM/YYYY"),
+      fechaIng: new Date().toLocaleDateString(),
+      sexo: this.form.value.sexo,
+      estado: "Disponible",
+      observacion: this.form.value.observacion
+    }
     
+    this._animalServicio.editarAnimals(animal);
+    this.dialogRef.close("actualizado");    
   }
 
 }

@@ -15,7 +15,7 @@ export class AnimalService {
     },
     { 
       id: 2, imagen: "dog2.jpg", nombre: "Max", raza: "Labrador Retriever", categoria: "Perro", 
-      fechaNac: "15/03/2019", fechaIng: "01/06/2021", sexo: "Macho", estado: "Disponible",
+      fechaNac: "15/06/2019", fechaIng: "01/06/2021", sexo: "Macho", estado: "Disponible",
       observacion: "Encontramos a Max vagando por las calles de Quito. Parecía haber sido abandonado por su antigua familia, así que decidimos llevarlo a la fundación. Es un perro muy activo y le encanta jugar con otros perros y personas.",
     },
     { 
@@ -40,13 +40,14 @@ export class AnimalService {
     this.animal.push(newAnimal);
   }
 
-  editarAnimal(updateAnimal: IAnimal){
+  editarAnimals(updateAnimals: IAnimal) {
     this.animal.forEach(elemento => {
-      if(elemento.id == updateAnimal.id){
-        elemento.nombre == updateAnimal.nombre
+      if (elemento.id == updateAnimals.id) {
+        Object.assign(elemento, updateAnimals);
       }
     });
   }
+
 
   getAnimals(): IAnimal[] {
     return this.animal;

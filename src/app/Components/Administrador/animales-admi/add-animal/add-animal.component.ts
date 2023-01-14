@@ -39,7 +39,7 @@ export class AddAnimalComponent {
       this.form = this.fb.group({
         nombre: ['', Validators.required],
         raza: ['', Validators.required],
-        tipo: ['', Validators.required],
+        categoria: ['', Validators.required],
         sexo: ['', Validators.required],
         fechaNac: ['', Validators.required],
         imagen: ['', Validators.required],
@@ -62,10 +62,10 @@ export class AddAnimalComponent {
       id: this._animalServicio.animal.length + 1,
       imagen: this.fileName.name,
       nombre: this.form.value.nombre,
-      raza: this.form.value.nombre,
-      categoria: this.form.value.tipo,
+      raza: this.form.value.raza,
+      categoria: this.form.value.categoria,
       fechaNac: moment(this.form.value.fechaNac).format("DD/MM/YYYY"),
-      fechaIng: moment().format("DD/MM/YYYY"),
+      fechaIng: new Date().toLocaleDateString(),
       sexo: this.form.value.sexo,
       estado: "Disponible",
       observacion: this.form.value.observacion
