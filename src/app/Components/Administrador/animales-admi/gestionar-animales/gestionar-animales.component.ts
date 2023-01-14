@@ -72,9 +72,7 @@ export class GestionarAnimalesComponent implements OnInit, AfterViewInit{
       autoFocus: false,
       disableClose: true,
       width: '50%',
-      data: {
-        data: data
-      }      
+      data: data      
     }).afterClosed().subscribe(
       (resultado) => {
         if(resultado == "éxito"){
