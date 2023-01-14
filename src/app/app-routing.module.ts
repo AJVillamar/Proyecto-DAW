@@ -10,6 +10,7 @@ import { CustomizeComponent } from './Components/Administrador/customize/customi
 import { InicioAnimalesComponent } from './Components/Administrador/animales-admi/inicio-animales/inicio-animales.component';
 import { GestionarAnimalesComponent } from './Components/Administrador/animales-admi/gestionar-animales/gestionar-animales.component';
 import { ReporteAnimalesComponent } from './Components/Administrador/animales-admi/reporte-animales/reporte-animales.component';
+import { CrudRescatesComponent } from './Components/Administrador/animales-admi/crud-rescates/crud-rescates.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -19,7 +20,8 @@ const routes: Routes = [
     children: [
       { path: '', component: InicioAnimalesComponent },
       { path: 'gestionar-animales', component: GestionarAnimalesComponent, data: { animation: 'Uno' } },
-      { path: 'reporte-animales', component: ReporteAnimalesComponent, data: { animation: 'Dos' } }
+      { path: 'reporte-animales', component: ReporteAnimalesComponent, data: { animation: 'Dos' } },
+      { path: 'crud-rescate', component: CrudRescatesComponent, data: { animation: 'Dos' } }
     ]  
   }
 ];
