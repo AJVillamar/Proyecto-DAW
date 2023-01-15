@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AnimalService {
-  bandera!: IAnimal[];
+  bandera!: IAnimal;
 
   animal: IAnimal[] = [
     { 
@@ -84,6 +84,15 @@ export class AnimalService {
 
   getAnimals(): IAnimal[] {
     return this.animal;
+  }
+
+  getAnimalsById(id: number): IAnimal{
+    this.animal.forEach(a => {
+      if (a.id === id) {
+        this.bandera = a;
+      }
+    });   
+    return this.bandera;
   }
 
   getDogs(): IAnimal[] {

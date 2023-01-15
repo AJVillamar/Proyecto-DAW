@@ -1,3 +1,4 @@
+import { InformacionAnimalComponent } from './Components/Adopcion/informacion-animal/informacion-animal.component';
 //Modulo
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -15,7 +16,8 @@ import { GestionarAnimalesComponent } from './Components/Administrador/animales-
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'adopcion', component:  ListarAnimalesComponent },
+  { path: 'listar', component:  ListarAnimalesComponent },
+  { path: 'informacion/:id', component: InformacionAnimalComponent },
   { path: 'admi-general', component: CustomizeComponent,
     children: [
       { path: '', component: InicioAnimalesComponent },

@@ -22,14 +22,15 @@ import { DonacionInicioComponent } from './Shared/Inicio/donacion-inicio/donacio
 import { BusquedaInicioComponent } from './Shared/Inicio/busqueda-inicio/busqueda-inicio.component';
 import { DenunciaInicioComponent } from './Shared/Inicio/denuncia-inicio/denuncia-inicio.component';
 import { ListarAnimalesComponent } from './Components/Adopcion/listar-animales/listar-animales.component';
-import { OrganizacionInicioComponent } from './Shared/Inicio/organizacion-inicio/organizacion-inicio.component';
-import { InicioAnimalesComponent } from './Components/Administrador/animales-admi/inicio-animales/inicio-animales.component';
-import { GestionarAnimalesComponent } from './Components/Administrador/animales-admi/gestionar-animales/gestionar-animales.component';
-import { ReporteAnimalesComponent } from './Components/Administrador/animales-admi/reporte-animales/reporte-animales.component';
 import { AddAnimalComponent } from './Components/Administrador/animales-admi/add-animal/add-animal.component';
+import { OrganizacionInicioComponent } from './Shared/Inicio/organizacion-inicio/organizacion-inicio.component';
 import { EditAnimalComponent } from './Components/Administrador/animales-admi/edit-animal/edit-animal.component';
 import { InfoAnimalComponent } from './Components/Administrador/animales-admi/info-animal/info-animal.component';
 import { DeleteAnimalComponent } from './Components/Administrador/animales-admi/delete-animal/delete-animal.component';
+import { InicioAnimalesComponent } from './Components/Administrador/animales-admi/inicio-animales/inicio-animales.component';
+import { ReporteAnimalesComponent } from './Components/Administrador/animales-admi/reporte-animales/reporte-animales.component';
+import { GestionarAnimalesComponent } from './Components/Administrador/animales-admi/gestionar-animales/gestionar-animales.component';
+import { InformacionAnimalComponent } from './Components/Adopcion/informacion-animal/informacion-animal.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { DeleteAnimalComponent } from './Components/Administrador/animales-admi/
     AddAnimalComponent,
     EditAnimalComponent,
     InfoAnimalComponent,
-    DeleteAnimalComponent
+    DeleteAnimalComponent,
+    InformacionAnimalComponent
   ], 
   imports: [
     BrowserModule,
