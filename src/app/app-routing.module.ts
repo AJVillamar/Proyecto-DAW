@@ -24,7 +24,7 @@ const routes: Routes = [
       { path: '', component: InicioAnimalesComponent },
       { path: 'gestionar-animales', component: GestionarAnimalesComponent, data: { animation: 'Uno' } },
       { path: 'reporte-animales', component: ReporteAnimalesComponent, data: { animation: 'Dos' } },
-      { path: 'crud-rescate', component: CrudRescatesComponent, data: { animation: 'Dos' } }
+      { path: 'crud-rescate', component: CrudRescatesComponent, data: { animation: 'Uno' } }
     ]  
   }
 ];

@@ -7,37 +7,145 @@ import { Irescate } from '../Interfaces/IRescates';
 export class rescateService {
   bandera!: Irescate;
 
-    rescate: Irescate[] = [
-        {
-            id: 1,
-            imagen: "https://www.elperiodico.com/es/imagenes/2020/05/28/actualidad/1590640000_000000_1590640000_noticia_normal.jpg",
-            nombre: "Pepito",
-            raza: "Pastor Aleman",
-            sexo: "Macho",
-            estado: 1,
-            descripcion: "Es un perro muy amigable y jugueton",
-            fecha: "2021-05-28",
-            id_animal: 1
+  rescate: Irescate[] = [
+    {
+    id: 1,
+    nombre: "Kitty",
+    raza: "Siames",
+    sexo: "Hembra",
+    estado: 1,
+    descripcion: "Se ha reportado un gato callejero en la esquina de la calle tal y tal, presenta heridas en la pata",
+    fecha: "2021-01-01",
+    id_animal: 1234
+    },
+    {
+    id: 2,
+    nombre: "Lucy",
+    raza: "Persa",
+    sexo: "Hembra",
+    estado: 2,
+    descripcion: "Se ha reportado un gato maltratado en la calle tal, necesita atención veterinaria de urgencia",
+    fecha: "2021-02-01",
+    id_animal: 5678
+    },
+    {
+      id: 3,
+      nombre: "Max",
+      raza: "Golden Retriever",
+      sexo: "Macho",
+      estado: 3,
+      descripcion: "Se ha reportado un perro herido en un accidente de tráfico en la calle tal, necesita atención veterinaria de urgencia",
+      fecha: "2021-03-01",
+      id_animal: 91011
+      },
+      {
+      id: 4,
+      nombre: "Bella",
+      raza: "Bulldog",
+      sexo: "Hembra",
+      estado: 4,
+      descripcion: "Se ha reportado un perro con problemas de salud graves en la calle tal, necesita atención veterinaria de urgencia",
+      fecha: "2021-04-01",
+      id_animal: 121314
+      },
+      {
+        id: 5,
+        nombre: "Charlie",
+        raza: "Siames",
+        sexo: "Macho",
+        estado: 1,
+        descripcion: "Se ha reportado un gato callejero en la calle tal, parece ser abandonado",
+        fecha: "2021-05-01",
+        id_animal: 151617
         },
         {
-            id: 2,
-            imagen: "https://www.elperiodico.com/es/imagenes/2020/05/28/actualidad/1590640000_000000_1590640000_noticia_normal.jpg",
-            nombre: "Pepito",
-            raza: "Pastor Aleman",
+        id: 6,
+        nombre: "Oliver",
+        raza: "Angora",
+        sexo: "Macho",
+        estado: 2,
+        descripcion: "Se ha reportado un gato maltratado en la calle tal, necesita atención veterinaria de urgencia",
+        fecha: "2021-06-01",
+        id_animal: 1819
+        },
+        {
+          id: 7,
+          nombre: "Toby",
+          raza: "Golden Retriever",
+          sexo: "Macho",
+          estado: 3,
+          descripcion: "Se ha reportado un perro herido en un accidente de tráfico en la calle tal, necesita atención veterinaria de urgencia",
+          fecha: "2021-07-01",
+          id_animal: 2021
+          },
+          {
+          id: 8,
+          nombre: "Mia",
+          raza: "Bulldog",
+          sexo: "Hembra",
+          estado: 4,
+          descripcion: "Se ha reportado un perro con problemas de salud graves en la calle tal, necesita atención veterinaria de urgencia",
+          fecha: "2021-08-01",
+          id_animal: 2223
+          },
+          {
+            id: 9,
+            nombre: "Rocky",
+            raza: "Boxer",
             sexo: "Macho",
             estado: 1,
-            descripcion: "Es un perro muy amigable y jugueton",
-            fecha: "2021-05-28",
-            id_animal: 1
-        }
-    ];
+            descripcion: "Se ha reportado un perro callejero en la calle tal, parece ser abandonado",
+            fecha: "2021-09-01",
+            id_animal: 2425
+            },
+            {
+            id: 10,
+            nombre: "Luna",
+            raza: "Siames",
+            sexo: "Hembra",
+            estado: 2,
+            descripcion: "Se ha reportado un gato maltratado en la calle tal, necesita atención veterinaria de urgencia",
+            fecha: "2021-10-01",
+            id_animal: 2627
+            },
+            {
+              id: 11,
+              nombre: "Buddy",
+              raza: "Golden Retriever",
+              sexo: "Macho",
+              estado: 3,
+              descripcion: "Se ha reportado un perro herido en un accidente de tráfico en la calle tal, necesita atención veterinaria de urgencia",
+              fecha: "2021-11-01",
+              id_animal: 2829
+              },
+              {
+              id: 12,
+              nombre: "Daisy",
+              raza: "Bulldog",
+              sexo: "Hembra",
+              estado: 4,
+              descripcion: "Se ha reportado un perro con problemas de salud graves en la calle tal, necesita atención veterinaria de urgencia",
+              fecha: "2021-12-01",
+              id_animal: 3031
+              },
+              {
+                id: 13,
+                nombre: "Gizmo",
+                raza: "Siames",
+                sexo: "Macho",
+                estado: 1,
+                descripcion: "Se ha reportado un gato callejero en la calle tal, parece ser abandonado",
+                fecha: "2022-01-01",
+                id_animal: 3233
+                }
+  ];
 
 
-  agregarMascota(newRescate: Irescate){
+  agregarRescate(newRescate: Irescate){
     this.rescate.push(newRescate);
   }
 
-  editarAnimals(updateAnimals: Irescate) {
+  editarRescate(updateAnimals: Irescate) {
     this.rescate.forEach(elemento => {
       if (elemento.id === updateAnimals.id) {
         Object.assign(elemento, updateAnimals);
@@ -53,17 +161,8 @@ export class rescateService {
     });
 }
 
-  getAnimals(): Irescate[] {
+  getRescate(): Irescate[] {
     return this.rescate;
-  }
-
-  getAnimalsById(id: number): Irescate{
-    this.rescate.forEach(a => {
-      if (a.id === id) {
-        this.bandera = a;
-      }
-    });   
-    return this.bandera;
   }
   
 }

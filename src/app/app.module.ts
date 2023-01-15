@@ -32,6 +32,8 @@ import { ReporteAnimalesComponent } from './Components/Administrador/animales-ad
 import { GestionarAnimalesComponent } from './Components/Administrador/animales-admi/gestionar-animales/gestionar-animales.component';
 import { InformacionAnimalComponent } from './Components/Adopcion/informacion-animal/informacion-animal.component';
 import { SolicitudAnimalComponent } from './Components/Adopcion/solicitud-animal/solicitud-animal.component';
+import { MatFormField, MatFormFieldControl, MatFormFieldModule } from '@angular/material/form-field';
+import { CrudRescatesComponent } from './Components/Administrador/crud-rescates/crud-rescates.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,8 @@ import { SolicitudAnimalComponent } from './Components/Adopcion/solicitud-animal
     InfoAnimalComponent,
     DeleteAnimalComponent,
     InformacionAnimalComponent,
-    SolicitudAnimalComponent
+    SolicitudAnimalComponent,
+    CrudRescatesComponent
   ], 
   imports: [
     BrowserModule,
@@ -66,7 +69,9 @@ import { SolicitudAnimalComponent } from './Components/Adopcion/solicitud-animal
     BrowserAnimationsModule,
     MaterialModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

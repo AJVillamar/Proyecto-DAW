@@ -1,6 +1,5 @@
 export interface Irescate {
     id?: number,
-    imagen: string,
     nombre: string,
     raza: string,
     sexo: string,
