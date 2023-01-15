@@ -69,7 +69,7 @@ mat-datepicker-toggle{
     border-bottom: 1px solid #506132;
 }
 
-
+ 
 input[type=file]::-webkit-file-upload-button {
     background: var(--VerdeClaro);
 }
