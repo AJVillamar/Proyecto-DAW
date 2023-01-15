@@ -14,7 +14,6 @@ import { MenuComponent } from './Shared/Inicio/menu/menu.component';
 import { InicioComponent } from './Components/inicio/inicio.component';
 import { SliderComponent } from './Shared/Inicio/slider/slider.component';
 import { FooterComponent } from './Shared/Inicio/footer/footer.component';
-import { AdopcionComponent } from './Components/adopcion/adopcion.component';
 import { DestacadoComponent } from './Shared/Inicio/destacado/destacado.component';
 import { CumpleaniosComponent } from './Shared/Inicio/cumpleanios/cumpleanios.component';
 import { AdoptaInicioComponent } from './Shared/Inicio/adopta-inicio/adopta-inicio.component';
@@ -22,6 +21,7 @@ import { CustomizeComponent } from './Components/Administrador/customize/customi
 import { DonacionInicioComponent } from './Shared/Inicio/donacion-inicio/donacion-inicio.component';
 import { BusquedaInicioComponent } from './Shared/Inicio/busqueda-inicio/busqueda-inicio.component';
 import { DenunciaInicioComponent } from './Shared/Inicio/denuncia-inicio/denuncia-inicio.component';
+import { ListarAnimalesComponent } from './Components/Adopcion/listar-animales/listar-animales.component';
 import { OrganizacionInicioComponent } from './Shared/Inicio/organizacion-inicio/organizacion-inicio.component';
 import { InicioAnimalesComponent } from './Components/Administrador/animales-admi/inicio-animales/inicio-animales.component';
 import { GestionarAnimalesComponent } from './Components/Administrador/animales-admi/gestionar-animales/gestionar-animales.component';
@@ -45,7 +45,7 @@ import { DeleteAnimalComponent } from './Components/Administrador/animales-admi/
     DenunciaInicioComponent,
     OrganizacionInicioComponent,
     FooterComponent,
-    AdopcionComponent,
+    ListarAnimalesComponent,
     LoginComponent,
     CustomizeComponent,
     InicioAnimalesComponent,

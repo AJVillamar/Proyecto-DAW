@@ -5,17 +5,17 @@ import { RouterModule, Routes } from '@angular/router';
 //Componentes
 import { LoginComponent } from './Components/login/login.component';
 import { InicioComponent } from './Components/inicio/inicio.component';
-import { AdopcionComponent } from './Components/adopcion/adopcion.component';
 import { CustomizeComponent } from './Components/Administrador/customize/customize.component';
-import { InicioAnimalesComponent } from './Components/Administrador/animales-admi/inicio-animales/inicio-animales.component';
-import { GestionarAnimalesComponent } from './Components/Administrador/animales-admi/gestionar-animales/gestionar-animales.component';
-import { ReporteAnimalesComponent } from './Components/Administrador/animales-admi/reporte-animales/reporte-animales.component';
+import { ListarAnimalesComponent } from './Components/Adopcion/listar-animales/listar-animales.component';
 import { CrudRescatesComponent } from './Components/Administrador/animales-admi/crud-rescates/crud-rescates.component';
+import { InicioAnimalesComponent } from './Components/Administrador/animales-admi/inicio-animales/inicio-animales.component';
+import { ReporteAnimalesComponent } from './Components/Administrador/animales-admi/reporte-animales/reporte-animales.component';
+import { GestionarAnimalesComponent } from './Components/Administrador/animales-admi/gestionar-animales/gestionar-animales.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'adopcion', component:  AdopcionComponent },
+  { path: 'adopcion', component:  ListarAnimalesComponent },
   { path: 'admi-general', component: CustomizeComponent,
     children: [
       { path: '', component: InicioAnimalesComponent },

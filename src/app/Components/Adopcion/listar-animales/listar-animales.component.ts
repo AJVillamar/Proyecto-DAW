@@ -1,14 +1,14 @@
 import { AnimalService } from 'src/app/Services/animal.service';
-import { IAnimal } from './../../Interfaces/IAnimal';
+import { IAnimal } from '../../../Interfaces/IAnimal';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-adopcion',
-  templateUrl: './adopcion.component.html',
-  styleUrls: ['./adopcion.component.css'],
+  selector: 'app-listar-animales',
+  templateUrl: './listar-animales.component.html',
+  styleUrls: ['./listar-animales.component.css'],
 })
 
-export class AdopcionComponent implements OnInit {
+export class ListarAnimalesComponent implements OnInit {
   animals!: IAnimal[];
   selectedButton: string = 'Perros';
 
