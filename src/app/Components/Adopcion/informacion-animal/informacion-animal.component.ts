@@ -1,3 +1,6 @@
+import { SolicitudAnimalComponent } from './../solicitud-animal/solicitud-animal.component';
+import { ToastsService } from './../../../Services/toasts.service';
+import { MatDialog } from '@angular/material/dialog';
 import { IAnimal } from './../../../Interfaces/IAnimal';
 import { AnimalService } from 'src/app/Services/animal.service';
 import { Component, OnInit } from '@angular/core';
@@ -15,7 +18,9 @@ export class InformacionAnimalComponent {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    protected _animalServicio: AnimalService
+    protected _animalServicio: AnimalService,
+    public dialog: MatDialog,
+    private toast: ToastsService
   ){
     this.route.params.subscribe(params => {
       const id = +params['id'];
@@ -24,6 +29,18 @@ export class InformacionAnimalComponent {
   }
   
 
-  enviarSolicitud(){}
+  openSolicitud(){
+    this.dialog.open(SolicitudAnimalComponent,{
+      autoFocus: false,
+      disableClose: true,
+      width: '50%',
+      data: this.animal
+    }).afterClosed().subscribe(
+      (resultado) => {
+        if(resultado == "solicitud"){
+          this.toast.exitoso('<strong>Solicitud envíada</strong><br> Pronto nos comunicaremos con usted.');
+        }
+    });
+  }
 
 }

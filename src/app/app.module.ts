@@ -31,6 +31,7 @@ import { InicioAnimalesComponent } from './Components/Administrador/animales-adm
 import { ReporteAnimalesComponent } from './Components/Administrador/animales-admi/reporte-animales/reporte-animales.component';
 import { GestionarAnimalesComponent } from './Components/Administrador/animales-admi/gestionar-animales/gestionar-animales.component';
 import { InformacionAnimalComponent } from './Components/Adopcion/informacion-animal/informacion-animal.component';
+import { SolicitudAnimalComponent } from './Components/Adopcion/solicitud-animal/solicitud-animal.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { InformacionAnimalComponent } from './Components/Adopcion/informacion-an
     EditAnimalComponent,
     InfoAnimalComponent,
     DeleteAnimalComponent,
-    InformacionAnimalComponent
+    InformacionAnimalComponent,
+    SolicitudAnimalComponent
   ], 
   imports: [
     BrowserModule,
