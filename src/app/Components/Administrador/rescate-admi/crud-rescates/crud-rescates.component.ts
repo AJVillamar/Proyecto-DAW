@@ -6,6 +6,8 @@ import {MatPaginator} from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { ToastsService } from 'src/app/Services/toasts.service';
 import { MatDialog } from '@angular/material/dialog';
+import {rescateDeleteComponent} from '../delete-rescate/delete-rescate.component';
+
 
 @Component({
   selector: 'app-crud-rescates',
@@ -58,8 +60,29 @@ export class CrudRescatesComponent implements OnInit {
     }
   
     eliminarRescate(id: number) {
-      // Lógica para eliminar un rescate existente
       this.servicio.deleteRescate(id);
     }
+
+    actualizar(){
+      this.dataSource = new MatTableDataSource<Irescate>(this.rescates as Irescate[]);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    }
+
+    openDelete(data: Irescate){
+      this.dialog.open(rescateDeleteComponent,{
+        autoFocus: false,
+        disableClose: true,
+        width: '50%',
+        data: data      
+      }).afterClosed().subscribe(
+        (resultado) => {
+          if(resultado == "eliminado"){
+            this.toast.fallecido('<strong>Estado: </strong><br>Se eliminó el reporte.');
+            this.actualizar();
+          }
+      });
+    }
+
   }
   

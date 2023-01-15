@@ -15,8 +15,7 @@ export class rescateService {
     sexo: "Hembra",
     estado: 1,
     descripcion: "Se ha reportado un gato callejero en la esquina de la calle tal y tal, presenta heridas en la pata",
-    fecha: "2021-01-01",
-    id_animal: 1234
+    fecha: "2021-01-01"
     },
     {
     id: 2,
@@ -25,8 +24,7 @@ export class rescateService {
     sexo: "Hembra",
     estado: 2,
     descripcion: "Se ha reportado un gato maltratado en la calle tal, necesita atención veterinaria de urgencia",
-    fecha: "2021-02-01",
-    id_animal: 5678
+    fecha: "2021-02-01"
     },
     {
       id: 3,
@@ -35,8 +33,7 @@ export class rescateService {
       sexo: "Macho",
       estado: 3,
       descripcion: "Se ha reportado un perro herido en un accidente de tráfico en la calle tal, necesita atención veterinaria de urgencia",
-      fecha: "2021-03-01",
-      id_animal: 91011
+      fecha: "2021-03-01"
       },
       {
       id: 4,
@@ -45,8 +42,7 @@ export class rescateService {
       sexo: "Hembra",
       estado: 4,
       descripcion: "Se ha reportado un perro con problemas de salud graves en la calle tal, necesita atención veterinaria de urgencia",
-      fecha: "2021-04-01",
-      id_animal: 121314
+      fecha: "2021-04-01"
       },
       {
         id: 5,
@@ -55,8 +51,7 @@ export class rescateService {
         sexo: "Macho",
         estado: 1,
         descripcion: "Se ha reportado un gato callejero en la calle tal, parece ser abandonado",
-        fecha: "2021-05-01",
-        id_animal: 151617
+        fecha: "2021-05-01"
         },
         {
         id: 6,
@@ -65,8 +60,7 @@ export class rescateService {
         sexo: "Macho",
         estado: 2,
         descripcion: "Se ha reportado un gato maltratado en la calle tal, necesita atención veterinaria de urgencia",
-        fecha: "2021-06-01",
-        id_animal: 1819
+        fecha: "2021-06-01"
         },
         {
           id: 7,
@@ -75,8 +69,7 @@ export class rescateService {
           sexo: "Macho",
           estado: 3,
           descripcion: "Se ha reportado un perro herido en un accidente de tráfico en la calle tal, necesita atención veterinaria de urgencia",
-          fecha: "2021-07-01",
-          id_animal: 2021
+          fecha: "2021-07-01"
           },
           {
           id: 8,
@@ -85,8 +78,7 @@ export class rescateService {
           sexo: "Hembra",
           estado: 4,
           descripcion: "Se ha reportado un perro con problemas de salud graves en la calle tal, necesita atención veterinaria de urgencia",
-          fecha: "2021-08-01",
-          id_animal: 2223
+          fecha: "2021-08-01"
           },
           {
             id: 9,
@@ -95,8 +87,7 @@ export class rescateService {
             sexo: "Macho",
             estado: 1,
             descripcion: "Se ha reportado un perro callejero en la calle tal, parece ser abandonado",
-            fecha: "2021-09-01",
-            id_animal: 2425
+            fecha: "2021-09-01"
             },
             {
             id: 10,
@@ -105,8 +96,7 @@ export class rescateService {
             sexo: "Hembra",
             estado: 2,
             descripcion: "Se ha reportado un gato maltratado en la calle tal, necesita atención veterinaria de urgencia",
-            fecha: "2021-10-01",
-            id_animal: 2627
+            fecha: "2021-10-01"
             },
             {
               id: 11,
@@ -115,8 +105,7 @@ export class rescateService {
               sexo: "Macho",
               estado: 3,
               descripcion: "Se ha reportado un perro herido en un accidente de tráfico en la calle tal, necesita atención veterinaria de urgencia",
-              fecha: "2021-11-01",
-              id_animal: 2829
+              fecha: "2021-11-01"
               },
               {
               id: 12,
@@ -125,8 +114,7 @@ export class rescateService {
               sexo: "Hembra",
               estado: 4,
               descripcion: "Se ha reportado un perro con problemas de salud graves en la calle tal, necesita atención veterinaria de urgencia",
-              fecha: "2021-12-01",
-              id_animal: 3031
+              fecha: "2021-12-01"
               },
               {
                 id: 13,
@@ -135,8 +123,7 @@ export class rescateService {
                 sexo: "Macho",
                 estado: 1,
                 descripcion: "Se ha reportado un gato callejero en la calle tal, parece ser abandonado",
-                fecha: "2022-01-01",
-                id_animal: 3233
+                fecha: "2022-01-01"
                 }
   ];
 

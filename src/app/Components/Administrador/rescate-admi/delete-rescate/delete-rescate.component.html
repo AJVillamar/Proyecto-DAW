@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-header">
+        <h2 class="card-title">Eliminar reporte de Rescate no. {{data.id}}</h2>
+    </div>
+    <div class="card-body">
+        <div class="row text-center">
+            <div class="col">
+                <p>
+                    ¿Está seguro(a) que quiere eliminar el reporte de rescate de <strong>{{data.nombre}}</strong>?.
+                </p>
+            </div>
+        </div>
+    <div class="card-footer">
+        <div class="row d-flex justify-content-around m-2">
+            <button class="btn btn-outline-danger" mat-dialog-close >
+                <span>
+                    Cancelar
+                </span>
+            </button>            
+            <button class="btn btn-outline-dark" (click)="deleteRescate()" >
+                <span>
+                    Confirmar
+                </span>
+            </button>
+        </div>
+    </div>
+</div>

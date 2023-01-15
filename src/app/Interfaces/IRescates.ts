@@ -5,6 +5,5 @@ export interface Irescate {
     sexo: string,
     estado: number,
     descripcion: string,
-    fecha: string,
-    id_animal: number
+    fecha: string
 }

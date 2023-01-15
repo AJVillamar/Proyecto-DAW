@@ -33,7 +33,7 @@ import { GestionarAnimalesComponent } from './Components/Administrador/animales-
 import { InformacionAnimalComponent } from './Components/Adopcion/informacion-animal/informacion-animal.component';
 import { SolicitudAnimalComponent } from './Components/Adopcion/solicitud-animal/solicitud-animal.component';
 import { MatFormField, MatFormFieldControl, MatFormFieldModule } from '@angular/material/form-field';
-import { CrudRescatesComponent } from './Components/Administrador/crud-rescates/crud-rescates.component';
+import { CrudRescatesComponent } from './Components/Administrador/rescate-admi/crud-rescates/crud-rescates.component';
 
 @NgModule({
   declarations: [
