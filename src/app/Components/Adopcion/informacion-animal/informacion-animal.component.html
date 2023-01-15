@@ -1,0 +1,39 @@
+<app-menu></app-menu>
+
+<div class="container-fluid caja-contenedora">
+    
+    <div class="caja caja-1 d-flex align-items-center justify-content-between">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 caja-izquierda d-flex align-items-center justify-content-center">
+                    <mat-card class="caja-img">
+                    <img class="img-card shadow-lg" mat-card-image src="../../../../assets/img/animales/{{animal.imagen}}">
+                    </mat-card>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5 d-flex align-items-center justify-content-center">
+                    <mat-card class="shadow p-4 caja-derecha bg-white">
+                        <mat-card-content>
+                            <h2 class="mat-card-title">{{ animal.nombre }}</h2>
+                            <p class="mat-card-subtitle">Raza: {{ animal.raza }}</p>
+                            <p class="mat-card-subtitle">Categoria: {{ animal.categoria }}</p>
+                            <p class="mat-card-subtitle">Fecha de nacimiento: {{ animal.fechaNac }}</p>
+                            <p class="mat-card-subtitle">Sexo: {{ animal.sexo }}</p>
+                            <p class="mat-card-subtitle mt-4">Observaciones: {{ animal.observacion }}</p>
+                            <div class="col-sm-12">
+                                <button class="btn btn-outline-success" (click)="enviarSolicitud()">
+                                    <small>Solicitar adopción</small>
+                                </button>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+        </div> 
+    </div>
+ 
+    <div class="caja caja-2">
+        <app-footer></app-footer>
+    </div>
+    
+</div>

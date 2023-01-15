@@ -29,7 +29,7 @@
                                     <p class="card-text">{{ animal.observacion.slice(0,100) + '...' }}</p>
                                 </div>
                                 <mat-divider></mat-divider>
-                                <button class="card-footer btn btn-outline-success">
+                                <button class="card-footer btn btn-outline-success" (click)="verInformacion(animal)">
                                     <small>Más Información</small>
                                 </button>
                             </div>

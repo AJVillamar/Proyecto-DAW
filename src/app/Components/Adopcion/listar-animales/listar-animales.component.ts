@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AnimalService } from 'src/app/Services/animal.service';
 import { IAnimal } from '../../../Interfaces/IAnimal';
 import { Component, OnInit } from '@angular/core';
@@ -12,7 +13,10 @@ export class ListarAnimalesComponent implements OnInit {
   animals!: IAnimal[];
   selectedButton: string = 'Perros';
 
-  constructor(private animalService: AnimalService) { }
+  constructor(
+    private animalService: AnimalService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.animals = this.animalService.getDogs();
@@ -27,5 +31,8 @@ export class ListarAnimalesComponent implements OnInit {
     }
   }
 
+  verInformacion(animal: IAnimal) {
+    this.router.navigate(['/informacion', animal.id]);
+  }
 
 }

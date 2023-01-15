@@ -9,7 +9,7 @@
         "caja1 caja1 caja1 caja1"
         "caja2 caja2 caja2 caja2"
     ;
-    background: url("../../../assets/img/Adopta/fondo-adopta-page.svg") no-repeat center;
+    background: url("../../../../assets/img/Adopta/fondo-adopta-page.svg") no-repeat center;
     background-size: cover;
 }
 
@@ -31,27 +31,10 @@
     height: 10%;
 }
 
-.btn:active{
-    transform: scale(.98);
-}
-
-.btn-outline-success{
-    border: 1px solid var(--VerdeOscuro);
-}
-
-.btn-outline-success:hover{
-    background-color: var(--VerdeMedio);
-    border: 1px solid var(--VerdeMedio);
-    box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
-    -webkit-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
-    -moz-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
-}
-
 .animals-container {
     height: 34rem;
     overflow-y: scroll;
     overflow-x: hidden;
-    /* background-image: linear-gradient(to bottom, #aed36c, #a2cb63, #95c45a, #88bc51, #7bb548, #6fab40, #64a138, #589730, #4c8827, #40791d, #356b13, #295d09); */
 }
  
 .animals-container::-webkit-scrollbar {
