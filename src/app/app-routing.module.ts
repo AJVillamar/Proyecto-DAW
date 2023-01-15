@@ -1,5 +1,4 @@
-import { CrudRescatesComponent } from './Components/Administrador/animales-admi/crud-rescates/crud-rescates.component';
-import { InformacionAnimalComponent } from './Components/Adopcion/informacion-animal/informacion-animal.component';
+
 //Modulo
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
