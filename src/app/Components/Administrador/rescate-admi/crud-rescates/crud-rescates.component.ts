@@ -7,6 +7,7 @@ import { MatSort } from '@angular/material/sort';
 import { ToastsService } from 'src/app/Services/toasts.service';
 import { MatDialog } from '@angular/material/dialog';
 import {rescateDeleteComponent} from '../delete-rescate/delete-rescate.component';
+import { EditRescateComponent } from '../edit-rescate/edit-rescate.component';
 
 
 @Component({
@@ -56,7 +57,7 @@ export class CrudRescatesComponent implements OnInit {
     }
   
     editarRescate(id: number) {
-      // Lógica para editar un rescate existente
+      this.servicio.editRescate(id);
     }
   
     eliminarRescate(id: number) {
@@ -67,6 +68,21 @@ export class CrudRescatesComponent implements OnInit {
       this.dataSource = new MatTableDataSource<Irescate>(this.rescates as Irescate[]);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
+    }
+
+    openEdit(data: Irescate){
+      this.dialog.open(EditRescateComponent,{
+        autoFocus: false,
+        disableClose: true,
+        width: '50%',
+        data: data      
+      }).afterClosed().subscribe(
+        (resultado) => {
+          if(resultado == "actualizado"){
+            this.toast.exitoso('<strong>Estado: </strong><br> El reporte de rescate ha sido actualizado con éxito.');
+            this.actualizar();
+          }
+      });
     }
 
     openDelete(data: Irescate){

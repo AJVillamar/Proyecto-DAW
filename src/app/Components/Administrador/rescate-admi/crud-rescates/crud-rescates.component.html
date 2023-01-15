@@ -2,7 +2,7 @@
   <div class="container">
       <br>
       <div class="w-100 text-center card border-0 shadow-sm mb-4">
-        <span class="h2 title w-100">Gestionar Animales</span>
+        <span class="h2 title w-100">Gestionar Reportes de Rescates</span>
       </div>
 
       <div class="caja">
@@ -36,6 +36,7 @@
             <span *ngIf="rescate.estado == '2'" class="badge text-bg-warning rounded-pill d-inline">Maltrato</span>
             <span *ngIf="rescate.estado == '3'" class="badge text-bg-danger rounded-pill d-inline">Accidente</span>
             <span *ngIf="rescate.estado == '4'" class="badge text-bg-danger rounded-pill d-inline">Estado grave</span>
+            <span *ngIf="rescate.estado == '5'" class="badge text-bg-success rounded-pill d-inline">Rescatado(a)</span>
           </td>
         </ng-container>
         <ng-container matColumnDef="descripcion" >
@@ -49,7 +50,9 @@
         <ng-container matColumnDef="acciones">
           <th mat-header-cell *matHeaderCellDef>Acciones</th>
           <td mat-cell *matCellDef="let rescate">
-            <button mat-icon-button color="sucess" (click)="editarRescate(rescate.id)"><mat-icon>edit</mat-icon></button>
+            <div class="btn btnIconAcciones btn-outline-success" (click)="openEdit(rescate)">
+              <mat-icon>edit</mat-icon>
+            </div>
             <div class="btn btnIconAcciones btn-outline-danger" (click)="openDelete(rescate)" [routerLink]="">
               <mat-icon>gpp_bad</mat-icon>
             </div>
