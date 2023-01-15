@@ -1,31 +1,116 @@
-.container-fluid{
+.caja-contenedora{
     width: 100%;
     height: 100%;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,1fr);
-    gap: .1rem;
     grid-template-areas: 
         "caja1 caja1 caja1 caja1"
         "caja2 caja2 caja2 caja2"
     ;
+    background: url("../../../assets/img/Adopta/fondo-adopta-page.svg") no-repeat center;
+    background-size: cover;
 }
 
-/*#region Caja 1 */
 .caja-1{
     grid-area: caja1;
-    margin: 5rem 1rem;
+    margin: 5.2rem 1rem;
     margin-bottom: 0;
-    height: 33rem;
+    height: 34.3rem;
 }
-/*#endregion */
 
-
-/*#region Caja 2 */
 .caja-2{
     grid-area: caja2;
+    margin-top: 1rem;
     width: 100%;
 }
-/*#endregion */
 
+.btn-group{
+    width: 100%;
+    height: 10%;
+}
+
+.btn:active{
+    transform: scale(.98);
+}
+
+.btn-outline-success{
+    border: 1px solid var(--VerdeOscuro);
+}
+
+.btn-outline-success:hover{
+    background-color: var(--VerdeMedio);
+    border: 1px solid var(--VerdeMedio);
+    box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+}
+
+.animals-container {
+    height: 34rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* background-image: linear-gradient(to bottom, #aed36c, #a2cb63, #95c45a, #88bc51, #7bb548, #6fab40, #64a138, #589730, #4c8827, #40791d, #356b13, #295d09); */
+}
+ 
+.animals-container::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: none;
+}
+
+.animals-container::-webkit-scrollbar-thumb {
+    background-color: var(--VerdeClaro);
+}
+
+.imagen{
+    height: 50%;
+    max-height: 10rem;
+    overflow: hidden;
+    background: #fff;
+}
+
+img {
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 1s;
+    width: 100%;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+.card-title{
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.card-text{
+    font-size: small;
+    
+}
+
+.card-footer{
+    background: #fff;
+}
+
+.btn{
+    width: 100%;
+}
+
+.btn:active{
+    transform: scale(.98);
+}
+
+.btn-outline-success{
+    border: 1px solid var(--VerdeClaro);
+}
+
+.btn-outline-success:hover{
+    background-color: var(--VerdeMedio);
+    border: 1px solid var(--VerdeMedio);
+    box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+}

@@ -1,9 +1,43 @@
 <app-menu></app-menu>
 
-<div class="container-fluid">
+<div class="container-fluid caja-contenedora">
     
     <div class="caja caja-1">
-        <div class="container bg-danger w-100 h-100">
+        <div class="container-fluid w-100 h-100">
+            <div class="row w-100 h-100 p-0 m-0">
+                <div class="col-3 d-flex align-items-center justify-content-center">
+                    <div class="btn-group">
+                        <button class="btn btn-outline-success" (click)="onButtonClick('Perros')" >
+                          <i class="fa-solid fa-dog"></i>
+                        </button>
+                        <button class="btn btn-outline-success" (click)="onButtonClick('Gatos')" >
+                          <i class="fa-solid fa-cat"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-1 bg-white" style="width: 2rem;"></div>
+
+                <div class="col rounded-start p-2 animals-container">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-center">
+                        <div class="col text-center" *ngFor="let animal of animals">
+                            <div class="card h-100">
+                                <div class="imagen d-flex align-items-center justify-content-center m-2">
+                                    <img  src="../../../assets/img/animales/{{animal.imagen}}" >
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ animal.nombre }}</h5>
+                                    <p class="card-text">{{ animal.observacion.slice(0,100) + '...' }}</p>
+                                </div>
+                                <mat-divider></mat-divider>
+                                <button class="card-footer btn btn-outline-success">
+                                    <small>Más Información</small>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
     
