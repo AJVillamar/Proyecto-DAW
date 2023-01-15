@@ -42,4 +42,8 @@ export class rescateDeleteComponent {
       this.dialogRef.close('eliminado');    
     }
 
+    close(){
+      this.dialogRef.close();
+    }
+
 }
