@@ -1,0 +1,45 @@
+/*Centrar contenido de las tablas de material*/
+.title{
+	background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+	background-size: cover;
+	color: transparent;
+    padding-top: .2rem;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+mat-table{
+    width: 100%;
+    
+}
+.caja{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+th{
+  background: var(--VerdeClaro);
+  font-size: .9rem;
+  font-weight: 500;
+  color: #FFF;
+}
+mat-icon{
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  width: 100%;
+}
+
+/*Centrar contenido de las tablas de material y que el contenido de cabecera "Descripción" se vea mejor el contenido*/
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}

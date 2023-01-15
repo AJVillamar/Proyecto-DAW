@@ -1,0 +1,69 @@
+<div class="container-fluid w-auto d-flex justify-content-center align-items-start p-3 shadow m-4 rounded-4 bg-white">
+  <div class="container">
+      <br>
+      <div class="w-100 text-center card border-0 shadow-sm mb-4">
+        <span class="h2 title w-100">Gestionar Reportes de Rescates</span>
+      </div>
+
+      <div class="caja">
+        <mat-form-field appearance="standard" class="w-75">
+          <mat-label>Filtro</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Buscar..." #input autocomplete="off">
+        </mat-form-field>
+      </div>
+
+      <table mat-table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="id">ID</th>
+          <td mat-cell *matCellDef="let rescate">{{ rescate.id }}</td>
+        </ng-container>
+        <ng-container matColumnDef="nombre" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="nombre">Nombre</th>
+          <td mat-cell *matCellDef="let rescate">{{ rescate.nombre }}</td>
+        </ng-container>
+        <ng-container matColumnDef="raza">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="raza">Raza</th>
+          <td mat-cell *matCellDef="let rescate">{{ rescate.raza }}</td>
+        </ng-container>
+        <ng-container matColumnDef="sexo">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="sexo">Sexo</th>
+          <td mat-cell *matCellDef="let rescate">{{ rescate.sexo }}</td>
+        </ng-container>
+        <ng-container matColumnDef="estado">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="estado">Estado</th>
+          <td mat-cell *matCellDef="let rescate">
+            <span *ngIf="rescate.estado == '1'" class="badge text-bg-success rounded-pill d-inline">Callejero</span>
+            <span *ngIf="rescate.estado == '2'" class="badge text-bg-warning rounded-pill d-inline">Maltrato</span>
+            <span *ngIf="rescate.estado == '3'" class="badge text-bg-danger rounded-pill d-inline">Accidente</span>
+            <span *ngIf="rescate.estado == '4'" class="badge text-bg-danger rounded-pill d-inline">Estado grave</span>
+            <span *ngIf="rescate.estado == '5'" class="badge text-bg-success rounded-pill d-inline">Rescatado(a)</span>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="descripcion" >
+          <th mat-header-cell *matHeaderCellDef>Descripción</th>
+          <td mat-cell *matCellDef="let rescate">{{ rescate.descripcion }}</td>
+        </ng-container>
+        <ng-container matColumnDef="fecha">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="fecha">Fecha</th>
+          <td mat-cell *matCellDef="let rescate">{{ rescate.fecha }}</td>
+        </ng-container>
+        <ng-container matColumnDef="acciones">
+          <th mat-header-cell *matHeaderCellDef>Acciones</th>
+          <td mat-cell *matCellDef="let rescate">
+            <div class="btn btnIconAcciones btn-outline-success" (click)="openEdit(rescate)">
+              <mat-icon>edit</mat-icon>
+            </div>
+            <div class="btn btnIconAcciones btn-outline-danger" (click)="openDelete(rescate)" [routerLink]="">
+              <mat-icon>gpp_bad</mat-icon>
+            </div>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No hay datos que coincidan con el filtro "{{input.value}}"</td>
+      </tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10]"></mat-paginator>
+  </div>
+</div>

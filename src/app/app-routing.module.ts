@@ -12,7 +12,7 @@ import { InformacionAnimalComponent } from './Components/Adopcion/informacion-an
 import { InicioAnimalesComponent } from './Components/Administrador/animales-admi/inicio-animales/inicio-animales.component';
 import { ReporteAnimalesComponent } from './Components/Administrador/animales-admi/reporte-animales/reporte-animales.component';
 import { GestionarAnimalesComponent } from './Components/Administrador/animales-admi/gestionar-animales/gestionar-animales.component';
-import { CrudRescatesComponent } from './Components/Administrador/crud-rescates/crud-rescates.component';
+import { CrudRescatesComponent } from './Components/Administrador/rescate-admi/crud-rescates/crud-rescates.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -24,7 +24,7 @@ const routes: Routes = [
       { path: '', component: InicioAnimalesComponent },
       { path: 'gestionar-animales', component: GestionarAnimalesComponent, data: { animation: 'Uno' } },
       { path: 'reporte-animales', component: ReporteAnimalesComponent, data: { animation: 'Dos' } },
-      { path: 'crud-rescate', component: CrudRescatesComponent, data: { animation: 'Dos' } }
+      { path: 'crud-rescate', component: CrudRescatesComponent, data: { animation: 'Uno' } }
     ]  
   }
 ];
