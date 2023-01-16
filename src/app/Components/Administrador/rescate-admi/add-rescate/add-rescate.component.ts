@@ -39,19 +39,12 @@ export class AddRescateComponent {
       this.form = this.fb.group({
         nombre: ['', Validators.required],
         raza: ['', Validators.required],
-        categoria: ['', Validators.required],
         sexo: ['', Validators.required],
-        fechaNac: ['', Validators.required],
-        imagen: ['', Validators.required],
-        observacion: ['', Validators.required],
+        estado: ['', Validators.required],
+        descripcion: ['', Validators.required]
       })
   }
 
-  onFileSelected(event: Event) {
-    this.fileName = (event.target as HTMLInputElement).files?.[0]
-  }
-
-  
   ingresarRescate(){
     if(this.form.invalid){
       this.toast.error('<strong>Error: </strong><br> Todos los campos son obligatorios.');
@@ -65,8 +58,9 @@ export class AddRescateComponent {
       sexo: this.form.value.sexo,
       estado: this.form.value.estado,
       descripcion: this.form.value.descripcion,
-      fecha: moment(this.form.value.fecha).format('DD/MM/YYYY')
+      fecha: moment().format('DD/MM/YYYY')
     }
+    console.log(newRescate);
     
     this.servicio.agregarRescate(newRescate);
     this.dialogRef.close("éxito");    
