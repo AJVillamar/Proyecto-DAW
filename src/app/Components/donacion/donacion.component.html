@@ -1,0 +1,89 @@
+<app-menu></app-menu>
+
+<div class="container-fluid">
+
+      <div class="caja caja-1 rounded">
+        <div class="container-fluid p-3"> 
+          <div class="row">
+              <div class="col-6">
+                  <div class="row text-center">
+                      <h2>Ayudanos a ayudarlos.</h2>
+                      <p class="card-text">Los animales son seres vivos dignos de amor y cuidado, pero desafortunadamente, muchos de ellos son víctimas de la crueldad humana y el abandono. Nuestra organización de rescate animal trabaja incansablemente para salvar a estos animales y brindarles una vida mejor. </p>
+
+                      <p class="card-text"> Sin embargo, nuestra labor no es fácil y necesitamos tu ayuda. Por favor, considera hacer una donación para ayudarnos a cubrir los costos de atención médica, alimentación y refugio para los animales en peligro. Juntos podemos crear un futuro mejor para todos los animales, ayúdanos a salvar vidas y hacer una diferencia en el mundo. Haz una donación hoy.</p>
+                      
+                      <p class="card-text">Para esto dejamos nuestros contactos para poder hacer llegar sus donaciones.</p>
+                      <div class="caja">
+                        <img class="dona" mat-card-image src="../../../../../assets/img/Donacion/donacion-gatito.jpg">
+                      </div>
+                      
+                      
+
+                  </div> 
+                  
+              </div>
+              <div class="col-6">
+                <div class="row text-center">
+                    <h2>Donaciones por medio de PayPal.</h2>
+                    <p class="card-text-paypal">Completas tus datos para continuar con tu donacion:</p>
+                </div> 
+                
+                <form [formGroup]="formDonacion" (ngSubmit)="submit()">
+                <div class="col">
+                  <mat-form-field appearance="fill">
+                      <mat-label>Nombres</mat-label>
+                      <input type="text" formControlName="nombres" class="nombres" matInput autocomplete="off">
+                      <mat-icon matPrefix>person</mat-icon>
+                  </mat-form-field>
+                  <span *ngIf="this.formDonacion.get('nombre')?.errors?.['required']">
+                    (El nombre no puede quedar vacío)
+                  </span>
+                </div>
+
+                <div class="col">
+                  <mat-form-field appearance="fill">
+                      <mat-label>Donacion</mat-label>
+                      <input type="text" formControlName="donacion" class="donacion" matInput autocomplete="off">
+                      <mat-icon matPrefix>attach_money</mat-icon>
+                  </mat-form-field>
+                </div>
+
+                <div class="col">
+                  <mat-form-field appearance="fill">
+                      <mat-label>Correo</mat-label>
+                      <input type="text" formControlName="correo" class="correo" matInput autocomplete="off">
+                      <mat-icon matPrefix>email</mat-icon>
+                      <span *ngIf="this.formDonacion.get('mail')?.errors?.['required']">
+                        (El mail no puede quedar vacío)
+                      </span>
+                  </mat-form-field>
+                  
+                </div>
+
+                <div class="example-button-container text-center">
+                  <div class="caja-boton">
+                      <button type="submit" class="btn" >
+                        <a href="#!">
+                          <img class="paypal" mat-card-image src="../../../../../assets/img/Donacion/donantes.png">
+                        </a>
+                      </button>
+                  </div>
+                </div>
+              </form>
+
+              <div>{{resultado}}</div>
+                
+            </div>
+            
+          </div>
+        </div>  
+      
+      </div>
+    
+      <div class="caja caja-2 rounded">
+        <app-footer></app-footer>
+      </div>
+
+</div>
+
+
