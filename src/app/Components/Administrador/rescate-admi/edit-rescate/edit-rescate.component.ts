@@ -62,6 +62,7 @@ export class EditRescateComponent implements OnInit {
       descripcion: this.data.descripcion,
       fecha: this.data.fecha
     })
+    console.log(this.form.value.estado);
   }
 
   editarRescate(){

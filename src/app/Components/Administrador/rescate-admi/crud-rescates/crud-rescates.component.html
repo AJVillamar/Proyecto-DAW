@@ -33,11 +33,11 @@
         <ng-container matColumnDef="estado">
           <th mat-header-cell *matHeaderCellDef mat-sort-header="estado">Estado</th>
           <td mat-cell *matCellDef="let rescate">
-            <span *ngIf="rescate.estado == '1'" class="badge text-bg-success rounded-pill d-inline">Callejero</span>
-            <span *ngIf="rescate.estado == '2'" class="badge text-bg-warning rounded-pill d-inline">Maltrato</span>
-            <span *ngIf="rescate.estado == '3'" class="badge text-bg-danger rounded-pill d-inline">Accidente</span>
-            <span *ngIf="rescate.estado == '4'" class="badge text-bg-danger rounded-pill d-inline">Grave</span>
-            <span *ngIf="rescate.estado == '5'" class="badge text-bg-success rounded-pill d-inline">Rescatado(a)</span>
+            <span *ngIf="rescate.estado == 1" class="badge text-bg-success rounded-pill d-inline">Callejero</span>
+            <span *ngIf="rescate.estado == 2" class="badge text-bg-warning rounded-pill d-inline">Maltrato</span>
+            <span *ngIf="rescate.estado == 3" class="badge text-bg-danger rounded-pill d-inline">Accidente</span>
+            <span *ngIf="rescate.estado == 4" class="badge text-bg-danger rounded-pill d-inline">Grave</span>
+            <span *ngIf="rescate.estado == 5" class="badge text-bg-success rounded-pill d-inline">Rescatado(a)</span>
           </td>
         </ng-container>
         <ng-container matColumnDef="fecha">
