@@ -3,12 +3,13 @@
   <mat-card-content>
     <mat-card-title><strong>{{data.nombre}}</strong></mat-card-title>
     <p><strong>Fecha: </strong>{{data.fecha}}</p>
+    <p><strong>Animal: </strong>{{data.animal}}</p>
     <p><strong>Raza: </strong>{{data.raza}}</p>
     <p><strong>Sexo: </strong>{{data.sexo}}</p>
     <p *ngIf="data.estado==1"><strong>Razón: </strong>Acoger a {{data.nombre}}.</p>
     <p *ngIf="data.estado==2"><strong>Razón: </strong>Maltrato.</p>
     <p *ngIf="data.estado==3 || data.estado==4"><strong>Razón: </strong>Atención a emergencia veterinaria urgente.</p>
-    <p *ngIf="data.estado==5">{{data.nombre}} ha sido rescatada.</p>
+    <p *ngIf="data.estado==5">{{data.nombre}} ha sido rescatado(a).</p>
     <mat-divider></mat-divider>
     <p><strong>Descripción del caso: </strong></p>
     <p>{{data.descripcion}}</p>

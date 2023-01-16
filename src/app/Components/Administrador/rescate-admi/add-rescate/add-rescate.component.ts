@@ -38,6 +38,7 @@ export class AddRescateComponent {
     private fb: FormBuilder){
       this.form = this.fb.group({
         nombre: ['', Validators.required],
+        animal: ['', Validators.required],
         raza: ['', Validators.required],
         sexo: ['', Validators.required],
         estado: ['', Validators.required],
@@ -54,6 +55,7 @@ export class AddRescateComponent {
     const newRescate: Irescate = {
       id: this.servicio.getRescate.length + 1,
       nombre: this.form.value.nombre,
+      animal: this.form.value.animal,
       raza: this.form.value.raza,
       sexo: this.form.value.sexo,
       estado: this.form.value.estado,

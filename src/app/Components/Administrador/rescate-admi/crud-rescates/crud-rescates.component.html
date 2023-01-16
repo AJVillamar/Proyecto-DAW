@@ -10,7 +10,6 @@
           <mat-label>Filtro</mat-label>
           <input matInput (keyup)="applyFilter($event)" placeholder="Buscar..." #input autocomplete="off">
         </mat-form-field>
-        <button mat-raised-button color="primary" (click)="actualizar()" class="btn btn-primary">Actualizar</button>
       </div>
 
       <table mat-table [dataSource]="dataSource" matSort>
@@ -21,6 +20,10 @@
         <ng-container matColumnDef="nombre" >
           <th mat-header-cell *matHeaderCellDef mat-sort-header="nombre">Nombre</th>
           <td mat-cell *matCellDef="let rescate">{{ rescate.nombre }}</td>
+        </ng-container>
+        <ng-container matColumnDef="animal">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header="animal">Animal</th>
+          <td mat-cell *matCellDef="let rescate">{{ rescate.animal }}</td>
         </ng-container>
         <ng-container matColumnDef="raza">
           <th mat-header-cell *matHeaderCellDef mat-sort-header="raza">Raza</th>

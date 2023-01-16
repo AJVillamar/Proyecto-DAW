@@ -14,10 +14,7 @@ export class DenunciaInicioComponent {
     private toast: ToastsService) { }
 
   openDialog() {
-    this.dialog.open(AddRescateComponent, {
-      width: '500px',
-      height: '500px'
-    }).afterClosed().subscribe(
+    this.dialog.open(AddRescateComponent).afterClosed().subscribe(
       (resultado) => {
         if(resultado == "éxito"){
           this.toast.exitoso('<strong>Estado: </strong><br> El reporte de rescate ha sido reportado con éxito.');
