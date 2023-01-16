@@ -5,29 +5,34 @@
     </div>
 </div>
 <div class="card-body">
-    <div class="row fecha-title">
-        <p>Guayaquil, Ecuador, {{ fechaActual }}</p>
-    </div>
-    <div class="row descripcion mt-2">
-        <p>Estimados,</p>
-        <p>
-            Me presento, mi nombre es <input class="imputNombre" placeholder="Nombres">
-            y estoy interesado en adoptar una mascota, no solo para hacernos compañía
-            sino para convertirnos en familia. 
-        </p>
-        <p> 
-            Después de evaluar las diferentes opciones, me he decidido por adoptar a <strong>{{ data.nombre }}</strong>, un <strong>{{ data.raza }}</strong> nacido el <strong>{{ fechaNacimiento }}</strong>.
-        </p>
-        <p class="mt-4">Por favor, encontrará mis datos de contacto a continuación:</p>
-    </div>
-    <div class="caja-final mt-2">
-        <p><input placeholder="Correo Electrónico">
-        <input placeholder="Teléfono">
-        <input placeholder="Dirección"></p>
-    </div>
-    <div class="row d-flex align-items-center justify-content-center pt-3">
-        <button class="btn btn-outline-success" type="submit" >
-            <mat-icon>send</mat-icon>
-        </button>
-    </div>
+    <form [formGroup]="form" (ngSubmit)="enviarSolicitud()">
+
+        <div class="row fecha-title">
+            <p>Guayaquil, Ecuador, {{ fechaActual }}</p>
+        </div>
+        <div class="row descripcion mt-2">
+            <p>Estimados,</p>
+            <p>
+                Me presento, mi nombre es <input class="imputNombre" placeholder="Nombres" autocomplete="off" formControlName="nombre">
+                y estoy interesado en adoptar una mascota, no solo para hacernos compañía
+                sino para convertirnos en familia. 
+            </p>
+            <p> 
+                Después de evaluar las diferentes opciones, me he decidido por adoptar a <strong>{{ data.nombre }}</strong>, un <strong>{{ data.raza }}</strong> nacido el <strong>{{ fechaNacimiento }}</strong>.
+            </p>
+            <p class="mt-4">Por favor, encontrará mis datos de contacto a continuación:</p>
+        </div>
+        <div class="caja-final mt-2">
+            <p>
+                <input placeholder="Correo Electrónico" autocomplete="off" formControlName="correo">
+                <input placeholder="Teléfono" autocomplete="off" formControlName="telefono">
+                <input placeholder="Dirección" autocomplete="off" formControlName="direccion">
+            </p>
+        </div>
+        <div class="row d-flex align-items-center justify-content-center pt-3">
+            <button class="btn btn-outline-success" type="submit" >
+                <mat-icon>send</mat-icon>
+            </button>
+        </div>
+    </form>
 </div>

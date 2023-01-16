@@ -31,6 +31,7 @@ export const MY_DATE_FORMATS = {
 export class AddAnimalComponent {
   form: FormGroup;
   fileName!: any;
+  
   constructor(
     private _animalServicio: AnimalService,
     private toast: ToastsService,

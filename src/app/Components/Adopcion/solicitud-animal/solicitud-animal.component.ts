@@ -1,3 +1,4 @@
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MAT_DATE_FORMATS } from '@angular/material/core';
 import { IAnimal } from './../../../Interfaces/IAnimal';
 import { ToastsService } from './../../../Services/toasts.service';
@@ -29,12 +30,20 @@ export const MY_DATE_FORMATS = {
 export class SolicitudAnimalComponent implements OnInit {
   fechaActual!: string;
   fechaNacimiento!: string;
+  form: FormGroup;
 
   constructor(
+    private fb: FormBuilder,
     private dialogRef: MatDialogRef<SolicitudAnimalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: IAnimal,
     private toast: ToastsService
   ) {
+    this.form = this.fb.group({
+      nombre: ['', Validators.required],
+      correo: ['', Validators.required],
+      telefono: ['', Validators.required],
+      direccion: ['', Validators.required]
+    })
   }
 
   ngOnInit(): void {
@@ -42,4 +51,10 @@ export class SolicitudAnimalComponent implements OnInit {
     this.fechaNacimiento = moment().locale('es').format('LL');
   }
 
+  enviarSolicitud(){
+    if(this.form.invalid){
+      this.toast.error('<strong>Error</strong><br> Todos los campos son obligatorio.');
+      return
+    }
+  }
 }
