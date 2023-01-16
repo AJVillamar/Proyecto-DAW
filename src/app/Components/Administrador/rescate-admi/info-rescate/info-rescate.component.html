@@ -1,0 +1,25 @@
+<mat-card class="mb-2 h-100 w-100 shadow">
+
+  <mat-card-content>
+    <mat-card-title><strong>{{data.nombre}}</strong></mat-card-title>
+    <p><strong>Fecha: </strong>{{data.fecha}}</p>
+    <p><strong>Raza: </strong>{{data.raza}}</p>
+    <p><strong>Sexo: </strong>{{data.sexo}}</p>
+    <p *ngIf="data.estado==1"><strong>Razón: </strong>Acoger a {{data.nombre}}.</p>
+    <p *ngIf="data.estado==2"><strong>Razón: </strong>Maltrato.</p>
+    <p *ngIf="data.estado==3 || data.estado==4"><strong>Razón: </strong>Atención a emergencia veterinaria urgente.</p>
+    <p *ngIf="data.estado==5">{{data.nombre}} ha sido rescatada.</p>
+    <mat-divider></mat-divider>
+    <p><strong>Descripción del caso: </strong></p>
+    <p>{{data.descripcion}}</p>
+  </mat-card-content>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-actions>
+      <button class="btn btn-outline-success" type="submit" mat-dialog-close>
+          <mat-icon class="btnAdd">arrow_back</mat-icon>
+      </button>
+  </mat-card-actions>
+
+</mat-card>

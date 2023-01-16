@@ -36,6 +36,7 @@ import { MatFormField, MatFormFieldControl, MatFormFieldModule } from '@angular/
 import { CrudRescatesComponent } from './Components/Administrador/rescate-admi/crud-rescates/crud-rescates.component';
 import { EditRescateComponent } from './Components/Administrador/rescate-admi/edit-rescate/edit-rescate.component';
 import { AddRescateComponent } from './Components/Administrador/rescate-admi/add-rescate/add-rescate.component';
+import { InfoRescateComponent } from './Components/Administrador/rescate-admi/info-rescate/info-rescate.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { AddRescateComponent } from './Components/Administrador/rescate-admi/add
     SolicitudAnimalComponent,
     CrudRescatesComponent,
     EditRescateComponent,
-    AddRescateComponent
+    AddRescateComponent,
+    InfoRescateComponent,
   ], 
   imports: [
     BrowserModule,

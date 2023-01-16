@@ -66,6 +66,7 @@ export class rescateService {
 
   agregarRescate(newRescate: Irescate){
     this.rescate.push(newRescate);
+    console.log(this.rescate);
   }
 
   editarRescate(updateAnimals: Irescate) {

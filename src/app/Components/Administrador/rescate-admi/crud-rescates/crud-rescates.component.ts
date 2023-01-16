@@ -8,6 +8,7 @@ import { ToastsService } from 'src/app/Services/toasts.service';
 import { MatDialog } from '@angular/material/dialog';
 import {rescateDeleteComponent} from '../delete-rescate/delete-rescate.component';
 import { EditRescateComponent } from '../edit-rescate/edit-rescate.component';
+import { InfoRescateComponent } from '../info-rescate/info-rescate.component';
 
 
 @Component({
@@ -28,7 +29,7 @@ export class CrudRescatesComponent implements OnInit {
         this.dataSource = new MatTableDataSource<Irescate>();
       }
 
-    displayedColumns: string[] = ['id','nombre', 'raza', 'sexo', 'estado', 'descripcion', 'fecha', 'acciones'];
+    displayedColumns: string[] = ['id','nombre', 'raza', 'sexo', 'estado', 'fecha', 'acciones'];
     @ViewChild(MatPaginator) paginator!: MatPaginator;
     @ViewChild(MatSort) sort!: MatSort;
 
@@ -52,10 +53,19 @@ export class CrudRescatesComponent implements OnInit {
       this.dataSource.filter = filterValue.trim().toLowerCase();
     }
     
-    agregarRescate() {
-      // Lógica para agregar un nuevo rescate
+    agregarRescate(newR: Irescate) {
+      this.servicio.addRescate(newR);
     }
-  
+    
+    openInfo(data: Irescate){
+      this.dialog.open(InfoRescateComponent,{
+        autoFocus: false,
+        disableClose: true,
+        width: '25%',
+        data: data      
+      });
+    }
+
     editarRescate(id: number) {
       this.servicio.editRescate(id);
     }
@@ -65,7 +75,8 @@ export class CrudRescatesComponent implements OnInit {
     }
 
     actualizar(){
-      this.dataSource = new MatTableDataSource<Irescate>(this.rescates as Irescate[]);
+      console.log(this.rescatesService.getRescate());
+      this.dataSource = new MatTableDataSource<Irescate>(this.rescatesService.getRescate() as Irescate[]);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     }
@@ -74,7 +85,7 @@ export class CrudRescatesComponent implements OnInit {
       this.dialog.open(EditRescateComponent,{
         autoFocus: false,
         disableClose: true,
-        width: '50%',
+        width: '25%',
         data: data      
       }).afterClosed().subscribe(
         (resultado) => {
