@@ -37,6 +37,7 @@ import { CrudRescatesComponent } from './Components/Administrador/rescate-admi/c
 import { EditRescateComponent } from './Components/Administrador/rescate-admi/edit-rescate/edit-rescate.component';
 import { AddRescateComponent } from './Components/Administrador/rescate-admi/add-rescate/add-rescate.component';
 import { InfoRescateComponent } from './Components/Administrador/rescate-admi/info-rescate/info-rescate.component';
+import { DonacionComponent } from './Components/donacion/donacion.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { InfoRescateComponent } from './Components/Administrador/rescate-admi/in
     EditRescateComponent,
     AddRescateComponent,
     InfoRescateComponent,
+    DonacionComponent,
   ], 
   imports: [
     BrowserModule,

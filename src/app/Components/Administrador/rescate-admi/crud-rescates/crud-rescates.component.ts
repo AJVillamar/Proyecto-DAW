@@ -9,6 +9,7 @@ import { MatDialog } from '@angular/material/dialog';
 import {rescateDeleteComponent} from '../delete-rescate/delete-rescate.component';
 import { EditRescateComponent } from '../edit-rescate/edit-rescate.component';
 import { InfoRescateComponent } from '../info-rescate/info-rescate.component';
+import { auto } from '@popperjs/core';
 
 
 @Component({
@@ -29,7 +30,7 @@ export class CrudRescatesComponent implements OnInit {
         this.dataSource = new MatTableDataSource<Irescate>();
       }
 
-    displayedColumns: string[] = ['id','nombre', 'raza', 'sexo', 'estado', 'fecha', 'acciones'];
+    displayedColumns: string[] = ['id','nombre','animal', 'raza', 'sexo', 'estado', 'fecha', 'acciones'];
     @ViewChild(MatPaginator) paginator!: MatPaginator;
     @ViewChild(MatSort) sort!: MatSort;
 
@@ -61,7 +62,7 @@ export class CrudRescatesComponent implements OnInit {
       this.dialog.open(InfoRescateComponent,{
         autoFocus: false,
         disableClose: true,
-        width: '25%',
+        width: auto,
         data: data      
       });
     }
@@ -84,8 +85,7 @@ export class CrudRescatesComponent implements OnInit {
     openEdit(data: Irescate){
       this.dialog.open(EditRescateComponent,{
         autoFocus: false,
-        disableClose: true,
-        width: '25%',
+        width: '35%',
         data: data      
       }).afterClosed().subscribe(
         (resultado) => {
@@ -100,7 +100,7 @@ export class CrudRescatesComponent implements OnInit {
       this.dialog.open(rescateDeleteComponent,{
         autoFocus: false,
         disableClose: true,
-        width: '50%',
+        width: '40%',
         data: data      
       }).afterClosed().subscribe(
         (resultado) => {

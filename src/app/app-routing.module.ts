@@ -13,6 +13,7 @@ import { InicioAnimalesComponent } from './Components/Administrador/animales-adm
 import { ReporteAnimalesComponent } from './Components/Administrador/animales-admi/reporte-animales/reporte-animales.component';
 import { GestionarAnimalesComponent } from './Components/Administrador/animales-admi/gestionar-animales/gestionar-animales.component';
 import { CrudRescatesComponent } from './Components/Administrador/rescate-admi/crud-rescates/crud-rescates.component';
+import { DonacionComponent } from './Components/donacion/donacion.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -26,7 +27,8 @@ const routes: Routes = [
       { path: 'reporte-animales', component: ReporteAnimalesComponent, data: { animation: 'Dos' } },
       { path: 'crud-rescate', component: CrudRescatesComponent, data: { animation: 'Uno' } }
     ]  
-  }
+  },
+  { path: 'donacion', component: DonacionComponent},
 ];
 
 @NgModule({
