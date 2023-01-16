@@ -1,0 +1,91 @@
+::ng-deep .mat-dialog-container{
+    padding: 0;
+}
+
+.card {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-body{
+    text-align: center;
+    margin: 0 2rem;
+    font-family: 'Cambria', 'Georgia', serif;
+}
+
+.fecha-title p{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.descripcion{
+    text-align: justify;
+}
+
+::ng-deep .mat-form-field-wrapper{
+    background: red;
+}
+ 
+input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #898686;
+    margin-right: .7rem ;
+}
+
+.imputNombre{
+    margin: 0 .7rem;
+}
+
+.caja-final{
+    text-align: center;
+}
+    
+.card-title {
+    text-transform: uppercase;
+}
+
+.testimonial-card{
+    text-align: right;
+}
+  
+.testimonial-card .card-up {
+    height: 75px;
+    overflow: hidden;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+    
+.testimonial-card .avatar {
+    width: 100px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.btn{
+    width: 50%;
+}
+
+.btn:active{
+    transform: scale(.98);
+}
+
+.btn-outline-success{
+    border: 1px solid var(--VerdeOscuro);
+}
+
+.btn-outline-success:hover{
+    background-color: var(--VerdeMedio);
+    border: 1px solid var(--VerdeMedio);
+    box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+}
