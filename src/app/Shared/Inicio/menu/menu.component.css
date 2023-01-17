@@ -96,7 +96,7 @@ button:hover{
 
 .btn div{
     color: var(--VerdeMedio);
-    font-size: .9rem;
+    font-size: 1rem;
     text-transform: capitalize;
 }
 
@@ -105,9 +105,11 @@ button:hover{
     border: 1px solid white;
 }
 
-mat-icon{
+i{
     color: var(--VerdeMedio);
+    font-size: 1.4rem;
 }
+
 
 @media (max-width:770px) {
     .unete{
