@@ -30,7 +30,7 @@ export class CrudRescatesComponent implements OnInit {
         this.dataSource = new MatTableDataSource<Irescate>();
       }
 
-    displayedColumns: string[] = ['id','nombre','animal', 'raza', 'sexo', 'estado', 'fecha', 'acciones'];
+    displayedColumns: string[] = ['nombre','animal', 'sexo', 'estado', 'fecha', 'acciones'];
     @ViewChild(MatPaginator) paginator!: MatPaginator;
     @ViewChild(MatSort) sort!: MatSort;
 
@@ -53,11 +53,7 @@ export class CrudRescatesComponent implements OnInit {
       const filterValue = (event.target as HTMLInputElement).value;
       this.dataSource.filter = filterValue.trim().toLowerCase();
     }
-    
-    agregarRescate(newR: Irescate) {
-      this.servicio.addRescate(newR);
-    }
-    
+
     openInfo(data: Irescate){
       this.dialog.open(InfoRescateComponent,{
         autoFocus: false,
@@ -65,21 +61,6 @@ export class CrudRescatesComponent implements OnInit {
         width: auto,
         data: data      
       });
-    }
-
-    editarRescate(id: number) {
-      this.servicio.editRescate(id);
-    }
-  
-    eliminarRescate(id: number) {
-      this.servicio.deleteRescate(id);
-    }
-
-    actualizar(){
-      console.log(this.rescatesService.getRescate());
-      this.dataSource = new MatTableDataSource<Irescate>(this.rescatesService.getRescate() as Irescate[]);
-      this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.sort;
     }
 
     openEdit(data: Irescate){
@@ -110,6 +91,14 @@ export class CrudRescatesComponent implements OnInit {
           }
       });
     }
+
+    actualizar(){
+      console.log(this.rescatesService.getRescate());
+      this.dataSource = new MatTableDataSource<Irescate>(this.rescatesService.getRescate() as Irescate[]);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    }
+
 
   }
   

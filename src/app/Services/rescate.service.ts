@@ -78,12 +78,13 @@ export class rescateService {
   }
 
   deleteRescate(id: number) {
-    this.rescate.forEach((elemento, index) => {
-        if (elemento.id === id) {
-            this.rescate.splice(index, 1);
-        }
-    });
+    this.rescate.forEach(a => {
+      if (a.id === id) {
+        a.rechazada = "Eliminada";
+      }
+    });    
   }
+
 
   getRescate(): Irescate[] {
     return this.rescate;

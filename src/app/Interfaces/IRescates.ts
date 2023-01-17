@@ -6,5 +6,6 @@ export interface Irescate {
     sexo: string,
     estado: number,
     descripcion: string,
-    fecha: string
+    fecha: string,
+    rechazada?: string
 }

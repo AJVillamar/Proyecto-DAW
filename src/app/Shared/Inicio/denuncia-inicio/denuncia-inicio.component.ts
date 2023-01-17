@@ -17,7 +17,7 @@ export class DenunciaInicioComponent {
     this.dialog.open(AddRescateComponent).afterClosed().subscribe(
       (resultado) => {
         if(resultado == "éxito"){
-          this.toast.exitoso('<strong>Estado: </strong><br> El reporte de rescate ha sido reportado con éxito.');
+          this.toast.exitoso('<strong>Gracias </strong><br> Reporte enviado con éxito.');
         }
     });
   }

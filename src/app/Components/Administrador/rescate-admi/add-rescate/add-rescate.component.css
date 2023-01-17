@@ -1,36 +1,20 @@
+
 .title{
 	background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
 	background-size: cover;
 	color: transparent;
-    padding-top: .2rem;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
 	-moz-background-clip: text;
 	-webkit-background-clip: text;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 } 
 
-.cerrar{
-    border-radius: 50%;
-}
-
-.cerrar:hover{
-    color: #F44336;
-    box-shadow: 2px 4px 21px -6px rgba(245, 9, 9, 0.55);
-    -webkit-box-shadow: 2px 4px 21px -6px rgba(231, 14, 14, 0.55);
-    -moz-box-shadow: 2px 4px 21px -6px rgba(228, 21, 21, 0.55);
-}
-
-.cerrar:active{
-    transform: scale(1.1);
-}
-
-hr{
-    width: 100%;
-    background-color: var(--VerdeMedio);
-    opacity: 1.2;
+.card{
+    background: url(../../../../../assets/img/Adopta/fondo-informacion-caja-derecha-page.svg) no-repeat top;
+    background-size: cover;
 }
 
 .col{
@@ -68,7 +52,6 @@ mat-datepicker-toggle{
     font-size: .6rem;
     border-bottom: 1px solid #506132;
 }
-
 
 input[type=file]::-webkit-file-upload-button {
     background: var(--VerdeClaro);

@@ -61,6 +61,7 @@ a{
     font-size: .8rem;
     padding: .5rem 1rem;
     background: rgb(36, 34, 34);
+    cursor: pointer;
 }
 
 .badge:hover{
