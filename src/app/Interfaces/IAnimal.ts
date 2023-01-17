@@ -1,5 +1,5 @@
 export interface IAnimal {
-    id?: number,
+    id: number,
     imagen: string,
     nombre: string,
     raza: string,

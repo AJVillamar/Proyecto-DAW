@@ -1,0 +1,22 @@
+<div class="card text-center m-1">
+    <div class="card-header bg-white">
+        <span class="title w-100">{{titulo}}</span>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Esta apunto de realizar una acción</h5>
+        <p class="card-text">
+            <strong>{{ tituloDos }}</strong> la solicitud de adopción de <strong>{{ adopcion.nombres }}</strong> 
+            <br> el cual esta interesado en nuestra mascota <strong>{{ adopcion.nombreAnimal }}</strong>
+        </p>
+
+        <button [ngClass]="{
+            'btn-outline-success': titulo === 'Confirmar', 
+            'btn-outline-danger': titulo === 'Rechazar'}" 
+            class="btn mt-3 mb-2" (click)="aceptDelete()">
+        <mat-icon>{{icon}}</mat-icon>
+    </button>
+    </div>
+    <div class="card-footer bg-white">
+      {{fechaActual}}
+    </div>
+</div>

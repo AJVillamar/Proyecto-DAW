@@ -1,10 +1,15 @@
 export interface IAdopcion {
-    id?: number,
+    id: number,
     nombres: string,
     correo: string,
-    telefono: number,
+    telefono: string,
     direccion: string,
     estado: string,
+    fechaNac: string,
+    fechaReg: string,
     fechaAdopcion?: string,
-    idAnimal: number
+    idAnimal: number,
+    nombreAnimal: string,
+    raza: string,
+    imagen: string
 }

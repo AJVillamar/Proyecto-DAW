@@ -1,0 +1,32 @@
+<div class="testimonial-card">
+    <div class="card-up" style="background-color: var(--VerdeClaro);"></div>
+    <div class="avatar mx-auto bg-white">
+        <img src="assets/img/Logo/Logo-Azul.png" class="rounded-circle img-fluid"/>
+    </div>
+</div>
+<div class="card-body bg-white">
+    <div class="row fecha-title">
+        <p>Guayaquil, Ecuador, {{ fecha }}</p>
+    </div>
+    <div class="row descripcion mt-2">
+        <p>Estimados,</p>
+        <p>
+            Me presento, mi nombre es <input class="imputNombre" value="{{data.nombres}}" disabled>
+            y estoy interesado en adoptar una mascota, no solo para hacernos compañía
+            sino para convertirnos en familia. 
+        </p>
+        <p> 
+            Después de evaluar las diferentes opciones, me he decidido por adoptar a <strong>{{ data.nombres }}</strong>, un <strong>{{ data.raza }}</strong> nacido el <strong>{{ data.fechaNac }}</strong>.
+        </p>
+        <p class="mt-4">Por favor, encontrará mis datos de contacto a continuación:</p>
+    </div>
+    <div class="caja-final mt-2">
+        <p>
+            <input value="{{data.correo}}" disabled>
+            <input value="{{data.telefono}}" disabled>
+        </p>
+        <p>                
+            <input value="{{data.direccion}}" disabled class="w-50">
+        </p>
+    </div>
+</div>

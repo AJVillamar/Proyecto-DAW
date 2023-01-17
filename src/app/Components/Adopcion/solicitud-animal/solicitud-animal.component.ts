@@ -1,9 +1,11 @@
+import { IAdopcion } from './../../../Interfaces/IAdopcion';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MAT_DATE_FORMATS } from '@angular/material/core';
 import { IAnimal } from './../../../Interfaces/IAnimal';
 import { ToastsService } from './../../../Services/toasts.service';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Component, Inject, OnInit } from '@angular/core';
+import { AdopcionService } from 'src/app/Services/adopcion.service';
 import * as moment from 'moment';
 
 export const MY_DATE_FORMATS = {
@@ -34,6 +36,7 @@ export class SolicitudAnimalComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private _adopcionService: AdopcionService,
     private dialogRef: MatDialogRef<SolicitudAnimalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: IAnimal,
     private toast: ToastsService
@@ -56,5 +59,23 @@ export class SolicitudAnimalComponent implements OnInit {
       this.toast.error('<strong>Error</strong><br> Todos los campos son obligatorio.');
       return
     }
+
+    const adopcion: IAdopcion = {
+      id: this._adopcionService.adopcion.length + 1,
+      nombres: this.form.value.nombre,
+      raza: this.data.raza,
+      correo: this.form.value.correo,
+      telefono: this.form.value.telefono,
+      direccion: this.form.value.direccion,
+      estado: "Esperando",
+      fechaNac: this.data.fechaNac,
+      fechaReg: new Date().toLocaleDateString(),
+      idAnimal: this.data.id,
+      nombreAnimal: this.data.nombre,
+      imagen: this.data.imagen
+    }    
+    
+    this._adopcionService.agregarSolicitud(adopcion);
+    this.dialogRef.close("enviada");
   }
 }

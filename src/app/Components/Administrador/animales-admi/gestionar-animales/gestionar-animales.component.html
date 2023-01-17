@@ -59,7 +59,7 @@
                 <div *ngIf="row.estado != 'Fallecido'" class="btn btnIconAcciones btn-outline-success" (click)="openEdit(row)">
                   <mat-icon>edit</mat-icon>
                 </div>
-                <div class="btn btnIconAcciones btn-outline-danger" (click)="openDelete(row)" [routerLink]="">
+                <div *ngIf="row.estado != 'Fallecido'" class="btn btnIconAcciones btn-outline-danger" (click)="openDelete(row)" [routerLink]="">
                   <mat-icon>gpp_bad</mat-icon>
                 </div>
               </div>

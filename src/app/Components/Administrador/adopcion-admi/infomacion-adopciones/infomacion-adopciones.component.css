@@ -27,12 +27,16 @@
 .descripcion{
     text-align: justify;
 }
-
+ 
 input{
     border: none;
     outline: none;
     border-bottom: 1px solid #898686;
     margin-right: .7rem ;
+    background: none;
+    text-align: center;
+    font-weight: bold;
+    color: black;
 }
 
 .imputNombre{

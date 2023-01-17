@@ -38,6 +38,9 @@ import { EditRescateComponent } from './Components/Administrador/rescate-admi/ed
 import { AddRescateComponent } from './Components/Administrador/rescate-admi/add-rescate/add-rescate.component';
 import { InfoRescateComponent } from './Components/Administrador/rescate-admi/info-rescate/info-rescate.component';
 import { DonacionComponent } from './Components/donacion/donacion.component';
+import { GestionarAdopcionesComponent } from './Components/Administrador/adopcion-admi/gestionar-adopciones/gestionar-adopciones.component';
+import { InfomacionAdopcionesComponent } from './Components/Administrador/adopcion-admi/infomacion-adopciones/infomacion-adopciones.component';
+import { AceptDeleteAdopcionComponent } from './Components/Administrador/adopcion-admi/acept-delete-adopcion/acept-delete-adopcion.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +73,9 @@ import { DonacionComponent } from './Components/donacion/donacion.component';
     AddRescateComponent,
     InfoRescateComponent,
     DonacionComponent,
+    GestionarAdopcionesComponent,
+    InfomacionAdopcionesComponent,
+    AceptDeleteAdopcionComponent,
   ], 
   imports: [
     BrowserModule,

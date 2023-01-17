@@ -37,8 +37,10 @@ export class InformacionAnimalComponent {
       data: this.animal
     }).afterClosed().subscribe(
       (resultado) => {
-        if(resultado == "solicitud"){
+        if(resultado == "enviada"){
+          this._animalServicio.editarEstado(this.animal.id,"Esperando");
           this.toast.exitoso('<strong>Solicitud envíada</strong><br> Pronto nos comunicaremos con usted.');
+          this.router.navigate(['']);
         }
     });
   }
