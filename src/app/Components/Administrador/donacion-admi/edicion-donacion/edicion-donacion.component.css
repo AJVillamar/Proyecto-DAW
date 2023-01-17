@@ -1,0 +1,109 @@
+.title{
+	background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+	background-size: cover;
+	color: transparent;
+    padding-top: .2rem;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+} 
+
+.cerrar{
+    border-radius: 50%;
+}
+
+.cerrar:hover{
+    color: #F44336;
+    box-shadow: 2px 4px 21px -6px rgba(245, 9, 9, 0.55);
+    -webkit-box-shadow: 2px 4px 21px -6px rgba(231, 14, 14, 0.55);
+    -moz-box-shadow: 2px 4px 21px -6px rgba(228, 21, 21, 0.55);
+}
+
+.cerrar:active{
+    transform: scale(1.1);
+}
+
+hr{
+    width: 100%;
+    background-color: var(--VerdeMedio);
+    opacity: 1.2;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-label, input, mat-select, textarea {
+    padding-left: .5rem;
+}
+
+mat-icon{
+    margin-left: .3rem;
+}
+
+mat-icon, mat-datepicker-toggle{
+    color: black;
+}
+
+mat-datepicker-toggle{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.input-group .input-group-text, .form-control{
+    background: none;
+    border-radius: 0;
+    border: none;
+    font-size: .6rem;
+    border-bottom: 1px solid #506132;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    background: var(--VerdeClaro);
+}
+
+.btn{
+    width: 50%;
+}
+
+.btn:active{
+    transform: scale(.98);
+}
+
+.btn-outline-success{
+    border: 1px solid var(--VerdeOscuro);
+}
+
+.btn-outline-success:hover{
+    background-color: var(--VerdeMedio);
+    border: 1px solid var(--VerdeMedio);
+    box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+}
+
+.caja{
+    border-radius: 19px;
+    background: #ffffff;
+    box-shadow:  24px 24px 48px #ebebeb,
+                -24px -24px 48px #ffffff;
+}
+
+.btnAdd{
+    color: var(--VerdeOscuro);
+}
+
+.btn-outline-success:hover .btnAdd{
+    color: #ffffff;
+}

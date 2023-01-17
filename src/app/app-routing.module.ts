@@ -15,6 +15,7 @@ import { GestionarAnimalesComponent } from './Components/Administrador/animales-
 import { CrudRescatesComponent } from './Components/Administrador/rescate-admi/crud-rescates/crud-rescates.component';
 import { DonacionComponent } from './Components/donacion/donacion.component';
 import { GestionarAdopcionesComponent } from './Components/Administrador/adopcion-admi/gestionar-adopciones/gestionar-adopciones.component';
+import { GestionDonacionComponent } from './Components/Administrador/donacion-admi/gestion-donacion/gestion-donacion.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -27,7 +28,8 @@ const routes: Routes = [
       { path: 'gestionar-animales', component: GestionarAnimalesComponent },
       { path: 'reporte-animales', component: ReporteAnimalesComponent },
       { path: 'crud-rescate', component: CrudRescatesComponent },
-      { path: 'gestionar-adopcion', component: GestionarAdopcionesComponent }
+      { path: 'gestionar-adopcion', component: GestionarAdopcionesComponent },
+      { path: 'gestion-donacion', component:GestionDonacionComponent}
     ]  
   },
   { path: 'donacion', component: DonacionComponent},

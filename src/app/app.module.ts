@@ -41,6 +41,10 @@ import { DonacionComponent } from './Components/donacion/donacion.component';
 import { GestionarAdopcionesComponent } from './Components/Administrador/adopcion-admi/gestionar-adopciones/gestionar-adopciones.component';
 import { InfomacionAdopcionesComponent } from './Components/Administrador/adopcion-admi/infomacion-adopciones/infomacion-adopciones.component';
 import { AceptDeleteAdopcionComponent } from './Components/Administrador/adopcion-admi/acept-delete-adopcion/acept-delete-adopcion.component';
+import { GestionDonacionComponent } from './Components/Administrador/donacion-admi/gestion-donacion/gestion-donacion.component';
+import { AgregarDonacionComponent } from './Components/Administrador/donacion-admi/agregar-donacion/agregar-donacion.component';
+import { EdicionDonacionComponent } from './Components/Administrador/donacion-admi/edicion-donacion/edicion-donacion.component';
+import { EliminarDonacionComponent } from './Components/Administrador/donacion-admi/eliminar-donacion/eliminar-donacion.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +80,10 @@ import { AceptDeleteAdopcionComponent } from './Components/Administrador/adopcio
     GestionarAdopcionesComponent,
     InfomacionAdopcionesComponent,
     AceptDeleteAdopcionComponent,
+    GestionDonacionComponent,
+    AgregarDonacionComponent,
+    EdicionDonacionComponent,
+    EliminarDonacionComponent,
   ], 
   imports: [
     BrowserModule,
