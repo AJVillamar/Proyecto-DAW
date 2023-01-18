@@ -4,7 +4,7 @@ export interface Irescate {
     animal: string,
     raza: string,
     sexo: string,
-    estado: number,
+    estado: string,
     descripcion: string,
     fecha: string,
     rechazada?: string
