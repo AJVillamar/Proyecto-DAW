@@ -17,7 +17,7 @@ import { CrudRescatesComponent } from './Components/Administrador/rescate-admi/c
 import { DonacionComponent } from './Components/donacion/donacion.component';
 import { GestionarAdopcionesComponent } from './Components/Administrador/adopcion-admi/gestionar-adopciones/gestionar-adopciones.component';
 import { GestionDonacionComponent } from './Components/Administrador/donacion-admi/gestion-donacion/gestion-donacion.component';
-
+ 
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'login', component: LoginComponent },
