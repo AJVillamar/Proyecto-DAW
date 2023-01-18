@@ -32,15 +32,14 @@ import { ReporteAnimalesComponent } from './Components/Administrador/animales-ad
 import { GestionarAnimalesComponent } from './Components/Administrador/animales-admi/gestionar-animales/gestionar-animales.component';
 import { InformacionAnimalComponent } from './Components/Adopcion/informacion-animal/informacion-animal.component';
 import { SolicitudAnimalComponent } from './Components/Adopcion/solicitud-animal/solicitud-animal.component';
-import { MatFormField, MatFormFieldControl, MatFormFieldModule } from '@angular/material/form-field';
 import { CrudRescatesComponent } from './Components/Administrador/rescate-admi/crud-rescates/crud-rescates.component';
 import { EditRescateComponent } from './Components/Administrador/rescate-admi/edit-rescate/edit-rescate.component';
 import { AddRescateComponent } from './Components/Administrador/rescate-admi/add-rescate/add-rescate.component';
 import { InfoRescateComponent } from './Components/Administrador/rescate-admi/info-rescate/info-rescate.component';
-import { DonacionComponent } from './Components/donacion/donacion.component';
 import { GestionarAdopcionesComponent } from './Components/Administrador/adopcion-admi/gestionar-adopciones/gestionar-adopciones.component';
 import { InfomacionAdopcionesComponent } from './Components/Administrador/adopcion-admi/infomacion-adopciones/infomacion-adopciones.component';
 import { AceptDeleteAdopcionComponent } from './Components/Administrador/adopcion-admi/acept-delete-adopcion/acept-delete-adopcion.component';
+import { DonacionComponent } from './Components/donacion/donacion.component';
 
 @NgModule({
   declarations: [
@@ -72,10 +71,10 @@ import { AceptDeleteAdopcionComponent } from './Components/Administrador/adopcio
     EditRescateComponent,
     AddRescateComponent,
     InfoRescateComponent,
-    DonacionComponent,
     GestionarAdopcionesComponent,
     InfomacionAdopcionesComponent,
     AceptDeleteAdopcionComponent,
+    DonacionComponent
   ], 
   imports: [
     BrowserModule,
@@ -83,8 +82,7 @@ import { AceptDeleteAdopcionComponent } from './Components/Administrador/adopcio
     BrowserAnimationsModule,
     MaterialModule,
     NgbModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
+    ReactiveFormsModule
     
   ],
   providers: [],
