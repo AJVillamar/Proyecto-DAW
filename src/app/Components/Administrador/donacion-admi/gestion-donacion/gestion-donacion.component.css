@@ -1,7 +1,7 @@
 .container-fluid{
     height: 82vh;
 }
-
+ 
 .title{
 	background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
 	background-size: cover;
@@ -15,7 +15,6 @@
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 
 .caja{
     display: flex;
@@ -63,7 +62,7 @@ table {
 }
   
 td, th {
-    width: 20%;
+    width: 15%;
 }
 
 th{
@@ -73,15 +72,8 @@ th{
     color: black;
 }
 
-
-
 .text-nombre-tabla {
     font-weight: 500;
-}
-  
-.badge {
-    font-weight: 300;
-    padding: .5rem;
 }
 
 .btnIconAcciones{

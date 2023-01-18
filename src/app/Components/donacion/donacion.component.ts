@@ -1,5 +1,6 @@
+import { ToastsService } from './../../Services/toasts.service';
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 
 @Component({
@@ -8,18 +9,24 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./donacion.component.css']
 })
 export class DonacionComponent {
-  resultado!: string;
+  form: FormGroup;
+  
+  constructor(
+    private toast: ToastsService,
+    private fb: FormBuilder
+  ) {
+    this.form = this.fb.group({
+      nombres: ['', Validators.required],
+      donacion: ['', Validators.required],
+      correo: ['', Validators.required]
+    }) 
+  }
 
-  formDonacion = new FormGroup({
-    nombres: new FormControl('', [Validators.required]),
-    correo: new FormControl('', [Validators.required, Validators.email]),
-    donacion: new FormControl('', [Validators.required])
-  });
 
   submit() {
-    if (this.formDonacion.valid)
-      this.resultado = "Todos los datos son válidos";
-    else
-      this.resultado = "Hay datos inválidos en el formulario";
+    if(this.form.invalid){
+      this.toast.error('<strong>Error</strong><br> Todos los campos son obligatorio.');
+      return
+    }
   }
 }

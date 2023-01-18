@@ -28,7 +28,7 @@ export class GestionDonacionComponent implements OnInit, AfterViewInit{
     this.dataSource = new MatTableDataSource<IDonante>(this._servicioDonacion.donante as IDonante[]);
   }
 
-  displayedColumns: string[] = ['Nombre', 'Tipo', 'Cantidad', 'Donante', 'Fecha', 'Observacion', 'Acción'];
+  displayedColumns: string[] = ['nombre', 'tipo', 'cantidad', 'donante', 'fecha', 'observacion', 'Acción'];
   
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;

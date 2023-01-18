@@ -16,12 +16,11 @@
 .caja-1{
     grid-area: caja1;
     margin: 5rem 1rem .5rem 1rem;
-    height: 50rem;
-    /*margin: 1rem;*/
-    background: url("../../../assets/img/Busqueda/fondo-busqueda-inicio.svg") no-repeat bottom;
+    height: 35rem;
     background-size: cover;
 }
 /*#endregion */
+
 
 /*#region Caja 2 */
 .caja-2{
@@ -31,22 +30,26 @@
 /*#endregion */
 
 .card-text{
-    font-size: 1rem;
+    font-size: -9rem;
     font-weight: 600;
     width: auto;
     color: #333;
+    text-align: justify;
     font-family: monospace;
+}
+
+.titulo{
+    color: #333;
+    font-size: 1.7rem;
+    position: relative;
 }
 
 .card-text-paypal{
-    font-size: 1rem;
     font-weight: 600;
-    width: auto;
     color: #333;
     font-family: monospace;
-    margin-bottom: 20px;
+    margin-bottom: 3rem;
 }
-
 
 h2{
     font-size: 2rem;
@@ -57,12 +60,9 @@ h2{
 }
 
 .dona {
-    width: 80%;
+    width: 100%;
     height: auto;
-    margin: 1rem;
-    border: 2px solid black;
     border-radius: .5rem;
-    box-shadow: 2px 2px 5px #ccc;
     object-fit: contain;
     object-position: center;
 }
@@ -72,12 +72,70 @@ h2{
 }
 
 mat-form-field {
-    width: 95%;
+    width: 90%;
     margin-left: .5rem;
+}
+
+mat-label, input, mat-select {
+    padding-left: .5rem;
+}
+
+mat-icon{
+    margin-left: .3rem;
+}
+
+.input-group .input-group-text{
+    background: none;
+    border-radius: 0;
+    border: none;
+    font-size: .6rem;
+    border-bottom: 1px solid #506132;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: var(--VerdeOscuro);
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+    background: var(--VerdeOscuro);
+    width: 100%;
 }
 
 .paypal{
     width: 70%;
+}
+
+.custom-shape-divider-top-1674072215 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1674072215 svg {
+    position: relative;
+    display: block;
+    width: calc(300% + 1.3px);
+    height: 192px;
+}
+
+.custom-shape-divider-top-1674072215 .shape-fill {
+    fill: #AED36C;
+}
+
+.btn{
+    background: url("../../../assets/img/Donacion/donantes.png") no-repeat center;
+    background-size: cover;
+    width: 50%;
+    height: 3.9rem;
+}
+
+.btn:active{
+    transform: scale(.98);
+    border: 1px solid white;
 }
 
 @media screen and (max-width: 780px){

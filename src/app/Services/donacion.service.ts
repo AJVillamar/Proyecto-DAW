@@ -10,43 +10,21 @@ export class DonacionService {
 
   donante: IDonante[] = [
     {
-      id: 1,
-      nombre: "Croquetas",
-      tipo: "Alimento",
-      donante: "Juan Valle",
-      cantidad: 4,
-      fecha: "14/02/2022",
+      id: 1, nombre: "Croquetas", tipo: "Alimento", donante: "Juan Valle", cantidad: 4, fecha: "14/02/2022",
       observacion: "Ninguna",
     },
     {
-      id: 2,
-      nombre: "Complejo B",
-      tipo: "Medicina",
-      donante: "Dayana Luz",
-      cantidad: 8,
-      fecha: "30/05/2022",
+      id: 2, nombre: "Complejo B", tipo: "Medicina", donante: "Dayana Luz", cantidad: 8, fecha: "30/05/2022",
       observacion: "Ninguna",
     },
     {
-      id: 3,
-      nombre: "Cepillo",
-      tipo: "Utensilio",
-      donante: "Fernando Mora",
-      cantidad: 2,
-      fecha: "04/06/2022",
+      id: 3, nombre: "Cepillo", tipo: "Utensilio", donante: "Fernando Mora", cantidad: 2, fecha: "04/06/2022",
       observacion: "Ninguna",
     },
     {
-      id: 4,
-      nombre: "Latas",
-      tipo: "Alimento",
-      donante: "Fernando Mora",
-      cantidad: 6,
-      fecha: "04/07/2022",
+      id: 4, nombre: "Latas", tipo: "Alimento", donante: "Fernando Mora", cantidad: 6, fecha: "04/07/2022",
       observacion: "Ninguna",
     }
-
-
   ]
 
   agregarDonacion(newDonante: IDonante){

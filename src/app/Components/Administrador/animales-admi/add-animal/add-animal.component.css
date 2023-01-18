@@ -31,7 +31,7 @@ hr{
     width: 100%;
     background-color: var(--VerdeMedio);
     opacity: 1.2;
-}
+} 
 
 .col{
     display: flex;

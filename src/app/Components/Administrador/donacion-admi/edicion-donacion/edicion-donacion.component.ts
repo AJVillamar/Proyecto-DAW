@@ -1,13 +1,31 @@
+import { MAT_DATE_FORMATS } from '@angular/material/core';
 import { IDonante } from './../../../../Interfaces/IDonante';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ToastsService } from 'src/app/Services/toasts.service';
 import { DonacionService } from 'src/app/Services/donacion.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, Inject, OnInit } from '@angular/core';
+import * as moment from 'moment';
+
+export const MY_DATE_FORMATS = {
+  parse: {
+    dateInput: 'DD/MM/YYYY',
+  },
+  display: {
+    dateInput: 'DD/MM/YYYY',
+    monthYearLabel: 'MMMM YYYYY',
+    dateA11yLabel: 'LL',
+    monthYearA11yLabel: 'MMMM YYYY'
+  }
+}
+
 @Component({
   selector: 'app-edicion-donacion',
   templateUrl: './edicion-donacion.component.html',
-  styleUrls: ['./edicion-donacion.component.css']
+  styleUrls: ['./edicion-donacion.component.css'],
+  providers: [
+    { provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMATS }
+  ]
 })
 export class EdicionDonacionComponent implements OnInit{
   form: FormGroup;
@@ -35,7 +53,7 @@ export class EdicionDonacionComponent implements OnInit{
       tipo: this.data.tipo,
       cantidad: this.data.cantidad,
       donante: this.data.donante,
-      fecha: this.data.fecha,
+      fecha: moment(this.data.fecha, 'DD/MM/YYYY').toDate(),
       observacion: this.data.observacion
     })
   }
@@ -52,7 +70,7 @@ export class EdicionDonacionComponent implements OnInit{
       tipo: this.form.value.tipo,
       cantidad: this.form.value.cantidad,
       donante: this.form.value.donante,
-      fecha: this.form.value.fecha,
+      fecha: moment(this.form.value.fecha).format("DD/MM/YYYY"),
       observacion: this.form.value.observacion
     }
     

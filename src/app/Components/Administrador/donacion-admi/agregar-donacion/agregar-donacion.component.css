@@ -99,7 +99,9 @@ input[type=file]::-webkit-file-upload-button {
     box-shadow:  24px 24px 48px #ebebeb,
                 -24px -24px 48px #ffffff;
 }
-
+.col-area{
+    background: RED;
+}
 .btnAdd{
     color: var(--VerdeOscuro);
 }
