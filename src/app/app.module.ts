@@ -1,3 +1,6 @@
+import { NosotrosComponent } from './Components/nosotros/nosotros.component';
+import { GestionDonacionComponent } from './Components/Administrador/donacion-admi/gestion-donacion/gestion-donacion.component';
+import { EdicionDonacionComponent } from './Components/Administrador/donacion-admi/edicion-donacion/edicion-donacion.component';
 //Modulos
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -14,6 +17,7 @@ import { MenuComponent } from './Shared/Inicio/menu/menu.component';
 import { InicioComponent } from './Components/inicio/inicio.component';
 import { SliderComponent } from './Shared/Inicio/slider/slider.component';
 import { FooterComponent } from './Shared/Inicio/footer/footer.component';
+import { DonacionComponent } from './Components/donacion/donacion.component';
 import { DestacadoComponent } from './Shared/Inicio/destacado/destacado.component';
 import { CumpleaniosComponent } from './Shared/Inicio/cumpleanios/cumpleanios.component';
 import { AdoptaInicioComponent } from './Shared/Inicio/adopta-inicio/adopta-inicio.component';
@@ -39,7 +43,7 @@ import { InfoRescateComponent } from './Components/Administrador/rescate-admi/in
 import { GestionarAdopcionesComponent } from './Components/Administrador/adopcion-admi/gestionar-adopciones/gestionar-adopciones.component';
 import { InfomacionAdopcionesComponent } from './Components/Administrador/adopcion-admi/infomacion-adopciones/infomacion-adopciones.component';
 import { AceptDeleteAdopcionComponent } from './Components/Administrador/adopcion-admi/acept-delete-adopcion/acept-delete-adopcion.component';
-import { DonacionComponent } from './Components/donacion/donacion.component';
+import { AgregarDonacionComponent } from './Components/Administrador/donacion-admi/agregar-donacion/agregar-donacion.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +78,11 @@ import { DonacionComponent } from './Components/donacion/donacion.component';
     GestionarAdopcionesComponent,
     InfomacionAdopcionesComponent,
     AceptDeleteAdopcionComponent,
-    DonacionComponent
+    DonacionComponent,
+    AgregarDonacionComponent,
+    EdicionDonacionComponent,
+    GestionDonacionComponent,
+    NosotrosComponent
   ], 
   imports: [
     BrowserModule,
