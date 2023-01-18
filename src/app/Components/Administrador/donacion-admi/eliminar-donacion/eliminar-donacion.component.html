@@ -1,0 +1,38 @@
+<div class="card"> 
+    <div class="card-header">
+        <h2 class="card-title">Eliminar donacion.</h2>
+    </div>
+    <div class="card-body">
+        <div class="row text-center">
+            <div class="caja">
+              
+            </div>
+            <div class="col">
+                <p>
+                    Está seguro que desea eliminar
+                </p>
+                <div class="row fechas">
+                    <div class="col-md-6">
+                        <h4>Donacion: {{data.nombre}}</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Donante: {{data.donante}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="row d-flex justify-content-around m-2">
+            <button class="btn btn-outline-danger" mat-dialog-close >
+                <span>
+                    Cancelar
+                </span>
+            </button>            
+            <button class="btn btn-outline-dark" (click)="eliminarDonacion()" >
+                <span>
+                    Confirmar
+                </span>
+            </button>
+        </div>
+    </div>
