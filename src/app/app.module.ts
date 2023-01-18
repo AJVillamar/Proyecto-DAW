@@ -41,6 +41,8 @@ import { DonacionComponent } from './Components/donacion/donacion.component';
 import { GestionarAdopcionesComponent } from './Components/Administrador/adopcion-admi/gestionar-adopciones/gestionar-adopciones.component';
 import { InfomacionAdopcionesComponent } from './Components/Administrador/adopcion-admi/infomacion-adopciones/infomacion-adopciones.component';
 import { AceptDeleteAdopcionComponent } from './Components/Administrador/adopcion-admi/acept-delete-adopcion/acept-delete-adopcion.component';
+import { NosotrosComponent } from './Components/nosotros/nosotros.component';
+
 
 @NgModule({
   declarations: [
@@ -76,6 +78,7 @@ import { AceptDeleteAdopcionComponent } from './Components/Administrador/adopcio
     GestionarAdopcionesComponent,
     InfomacionAdopcionesComponent,
     AceptDeleteAdopcionComponent,
+    NosotrosComponent
   ], 
   imports: [
     BrowserModule,

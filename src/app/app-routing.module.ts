@@ -1,3 +1,4 @@
+import { NosotrosComponent } from './Components/nosotros/nosotros.component';
 
 //Modulo
 import { NgModule } from '@angular/core';
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'listar', component:  ListarAnimalesComponent },
   { path: 'informacion/:id', component: InformacionAnimalComponent },
+  { path: 'nosotros/:accion', component: NosotrosComponent },
   { path: 'admi-general', component: CustomizeComponent,
     children: [
       { path: '', component: InicioAnimalesComponent },
