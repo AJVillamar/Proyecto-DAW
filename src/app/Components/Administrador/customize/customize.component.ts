@@ -26,14 +26,14 @@ export class CustomizeComponent implements OnInit {
     private breakpointObserver: BreakpointObserver,
     private router: Router
   ) {
-    // this.administrador = this.router.getCurrentNavigation()?.extras.state?.['data'];
+    this.administrador = this.router.getCurrentNavigation()?.extras.state?.['data'];
   } 
   
   ngOnInit() {  
   }
   
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'] || "Uno";
-  }
+  // prepareRoute(outlet: RouterOutlet) {
+  //   return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'] || "Uno";
+  // }
 
 }

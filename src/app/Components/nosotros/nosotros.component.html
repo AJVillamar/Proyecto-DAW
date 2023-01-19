@@ -1,26 +1,117 @@
 <app-menu></app-menu>
 
 <div class="container-fluid caja-contenedora">
-    
-    <div class="caja caja-1">
-        <div *ngIf="bandera === 'quienes-somos'" class="caja-media w-100 h-100 overflow-hidden">
-            <div class="card bg-dark text-white">
-                <img src="../../../assets/img/Otros/fondo-quienes.jpg" class="card-img-top" alt="Stony Beach"/>
-                <div class="card-img-overlay">
-                  <h1 class="card-title title">Fundación Refugio Pana</h1>
-                  <p class="card-text texto-uno w-50">
-                    Nace del corazón de su presidenta y fundadora Katiuska Delgado, una mujer que desde su infancia dedicó sus esfuerzos y bienes económicos a la ayuda de animales en situaciones de calle, cuando apenas tenía 4 años rescató a su primer perro, a quien encontró en un callejón lleno de sarna y con fiebre, gracias a la ayuda de su padre llevo al indefenso animal a su hogar donde le dio atención y cuidados.
-                  </p>
-                  <p class="card-text texto-dos">
-                    Somos un refugio Auto financiado que ayuda a los animales maltratados y que se encuentran en estado de abandono, nuestra función dentro de la sociedad es recatar a los animales que están en situación de calle, brindarle asistencia veterinaria y luego de su recuperación encontrarles un lugar responsable.
-                  </p>
-                </div>
-              </div>
+  <div class="caja caja-1">
+
+    <div *ngIf="bandera === 'quienes-somos'" class="caja-media w-100 overflow-hidden">
+      <div class="card bg-dark text-white">
+        <img src="../../../assets/img/Otros/fondo-quienes.jpg" class="card-img-top" alt="Stony Beach"/>
+        <div class="card-img-overlay">
+          <h1 class="card-title title">Fundación Refugio Pana</h1>
+          <p class="card-text texto-uno w-50">
+            Nace del corazón de su presidenta y fundadora Katiuska Delgado, una mujer que desde su infancia dedicó sus esfuerzos y bienes económicos a la ayuda de animales en situaciones de calle, cuando apenas tenía 4 años rescató a su primer perro, a quien encontró en un callejón lleno de sarna y con fiebre, gracias a la ayuda de su padre llevo al indefenso animal a su hogar donde le dio atención y cuidados.
+          </p>
+          <p class="card-text texto-dos">
+            Somos un refugio Auto financiado que ayuda a los animales maltratados y que se encuentran en estado de abandono, nuestra función dentro de la sociedad es recatar a los animales que están en situación de calle, brindarle asistencia veterinaria y luego de su recuperación encontrarles un lugar responsable.
+          </p>
         </div>
+      </div>
     </div>
-    
-    <div class="caja caja-2">
-        <app-footer></app-footer>
+
+    <div *ngIf="bandera === 'contactos'" class="caja-media w-100 caja-contacto">
+      <div class="custom-shape-divider-top-1674080847">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+      </div>
+      <div class="tab-content">
+        <div class="tab-pane fade show active">
+          <div class="text-center mb-3">
+            <p class="title pb-2" style="font-size: x-large;">Siguenos en:</p>
+            <button type="button" class="btn b-facebook btn-floating mx-1">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+            <button type="button" class="btn b-instagram btn-floating mx-1">
+              <i class="fab fa-instagram"></i>
+            </button>
+            <button type="button" class="btn b-twitter btn-floating mx-1">
+              <i class="fab fa-twitter"></i>
+            </button>
+          </div>
+
+          <p class="text-center" style="font-weight: 400;">o envíanos un correo</p>
+
+          <form>
+            <div class="row">
+              <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input matInput>
+              </mat-form-field>               
+            </div>
+            <div class="row">
+              <mat-form-field appearance="outline">
+                <mat-label>Correo</mat-label>
+                <input matInput>
+              </mat-form-field>               
+            </div>
+            <div class="row">
+              <mat-form-field appearance="outline">
+                <mat-label>Mensaje</mat-label>
+                <textarea cols="30" rows="7" matInput></textarea>
+              </mat-form-field>               
+            </div>
+            <div class="row">
+              <div class="col mb-4">
+                <button class="btn btn-outline-success dos w-100 mb-5" type="submit" >
+                  <mat-icon class="btnAdd">forward_to_inbox</mat-icon>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+
+    <div *ngIf="bandera === 'ubicacion'" class="caja-ubicacion w-100 d-flex align-items-center justify-content-center">
+      <div class="custom-shape-divider-bottom-1674084601">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+      </div>
+      <div class="row">
+        <div class="col">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1628.5870984931237!2d-79.91227521910528!3d-2.17058749928552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6ded40c9ae75%3A0xdd31a2b9a210fc94!2sUrdesa%20Central%2C%20Guayaquil%20090511!5e0!3m2!1ses!2sec!4v1674081143317!5m2!1ses!2sec" width="600" height="410" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col">
+          <div class="text-center mb-3">
+            <p class="title pb-2" style="font-size: x-large;">Ubicación:</p>
+            <div class="contactos-ubicacion">
+              <p>
+                <button type="button" class="btn b-facebook btn-floating mx-1">
+                  <i class="fa-solid fa-location-pin"></i>
+                </button>
+                Urdesa Central
+              </p>
+              <p>
+                <button type="button" class="btn b-instagram btn-floating mx-1">
+                  <i class="fa-solid fa-phone"></i>
+                </button>
+                0983959412
+              </p>
+              <button type="button" class="btn b-twitter btn-floating mx-1">
+                <i class="fa-solid fa-envelope"></i>
+              </button>
+              refugio-pana@gamil.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  <div class="caja caja-2">
+      <app-footer></app-footer>
+  </div>
     
 </div>

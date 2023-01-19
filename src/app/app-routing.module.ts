@@ -17,6 +17,8 @@ import { CrudRescatesComponent } from './Components/Administrador/rescate-admi/c
 import { DonacionComponent } from './Components/donacion/donacion.component';
 import { GestionarAdopcionesComponent } from './Components/Administrador/adopcion-admi/gestionar-adopciones/gestionar-adopciones.component';
 import { GestionDonacionComponent } from './Components/Administrador/donacion-admi/gestion-donacion/gestion-donacion.component';
+import { AdmiGeneralComponent } from './Components/Administrador/admi-general/admi-general/admi-general.component';
+import { ErrorPageComponent } from './Components/error-page/error-page.component';
  
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -24,9 +26,11 @@ const routes: Routes = [
   { path: 'listar', component:  ListarAnimalesComponent },
   { path: 'informacion/:id', component: InformacionAnimalComponent },
   { path: 'nosotros/:accion', component: NosotrosComponent },
+  { path: 'donacion', component: DonacionComponent},
   { path: 'admi-general', component: CustomizeComponent,
     children: [
       { path: '', component: InicioAnimalesComponent },
+      { path: 'gestionar-admi', component: AdmiGeneralComponent },
       { path: 'gestionar-animales', component: GestionarAnimalesComponent },
       { path: 'reporte-animales', component: ReporteAnimalesComponent },
       { path: 'crud-rescate', component: CrudRescatesComponent },
@@ -34,7 +38,7 @@ const routes: Routes = [
       { path: 'gestion-donacion', component:GestionDonacionComponent}
     ]  
   },
-  { path: 'donacion', component: DonacionComponent},
+  { path: '**', component: ErrorPageComponent }
 ];
 
 @NgModule({

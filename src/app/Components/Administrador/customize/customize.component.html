@@ -12,8 +12,8 @@
     <mat-nav-list>
       <mat-accordion>
 
-        <!-- <mat-expansion-panel *ngIf="administrador.rol == 'admi';"> -->
-        <mat-expansion-panel>
+        <mat-expansion-panel *ngIf="administrador.rol == 'admi';">
+        <!-- <mat-expansion-panel> -->
           <mat-expansion-panel-header>
             <mat-panel-title>
               <mat-icon class="icono">engineering</mat-icon>
@@ -22,14 +22,14 @@
               <span class="text-dark">Managers</span>              
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <a mat-list-item class="nav-link">
+          <a mat-list-item class="nav-link" routerLink="/admi-general/gestionar-admi">
             <i class="fa-solid fa-users-viewfinder"></i>
             Lista
           </a>
         </mat-expansion-panel>
 
-        <!-- <mat-expansion-panel *ngIf="administrador.rol == 'animales' || administrador.rol == 'admi';"> -->
-        <mat-expansion-panel>
+        <mat-expansion-panel *ngIf="administrador.rol == 'animales' || administrador.rol == 'admi';">
+        <!-- <mat-expansion-panel> -->
           <mat-expansion-panel-header>
             <mat-panel-title>
               <mat-icon class="icono">pets</mat-icon>
@@ -44,8 +44,8 @@
           </a>
         </mat-expansion-panel>
 
-        <!-- <mat-expansion-panel *ngIf="administrador.rol == 'adopcion' || administrador.rol == 'admi';"> -->
-        <mat-expansion-panel>
+        <mat-expansion-panel *ngIf="administrador.rol == 'adopcion' || administrador.rol == 'admi';">
+        <!-- <mat-expansion-panel> -->
           <mat-expansion-panel-header>
             <mat-panel-title>
               <mat-icon class="icono">volunteer_activism</mat-icon>
@@ -60,8 +60,8 @@
           </a>
         </mat-expansion-panel>
 
-        <!-- <mat-expansion-panel *ngIf="administrador.rol == 'donacion' || administrador.rol == 'admi';"> -->
-        <mat-expansion-panel>
+        <mat-expansion-panel *ngIf="administrador.rol == 'donacion' || administrador.rol == 'admi';">
+        <!-- <mat-expansion-panel> -->
           <mat-expansion-panel-header>
             <mat-panel-title>
               <mat-icon class="icono">cookie</mat-icon>
@@ -76,8 +76,8 @@
           </a>
         </mat-expansion-panel>
 
-        <!-- <mat-expansion-panel *ngIf="administrador.rol == 'rescate' || administrador.rol == 'admi';"> -->
-        <mat-expansion-panel>
+        <mat-expansion-panel *ngIf="administrador.rol == 'rescate' || administrador.rol == 'admi';">
+        <!-- <mat-expansion-panel> -->
           <mat-expansion-panel-header>
             <mat-panel-title>
               <mat-icon class="icono">policy</mat-icon>
@@ -90,17 +90,6 @@
             <i class="fa-solid fa-dog"></i>
             Manejo de rescates
           </a>
-        </mat-expansion-panel>
-        
-        <mat-expansion-panel class="text-center">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              <mat-icon class="icono">support_agent</mat-icon>
-            </mat-panel-title>
-            <mat-panel-description class="font-weight-bold">
-              <span class="text-dark opacity-100">¿Quiénes Somos?</span>              
-            </mat-panel-description>
-          </mat-expansion-panel-header>
         </mat-expansion-panel>
 
       </mat-accordion>
@@ -119,21 +108,13 @@
       </button>
 
       <div class="caja-nav">       
-        <!-- <span class="title-nav">Bienvenido {{administrador.nombres}} {{administrador.apellidos}}</span> -->
-        <span class="title-nav">Bienvenido</span>
+        <span class="title-nav">Bienvenido {{administrador.nombres}} {{administrador.apellidos}}</span>
+        <!-- <span class="title-nav">Bienvenido</span> -->
         <div class="caja-opciones">
           <button class="icon-menu" mat-icon-button [matMenuTriggerFor]="menu">
             <mat-icon matTooltip="Opciones">more_vert</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
-            <button mat-menu-item>
-              <mat-icon class="icono">account_circle</mat-icon>
-              <span>Perfil</span>
-            </button>
-            <button mat-menu-item>
-              <mat-icon class="icono">lock_reset</mat-icon>
-              <span>Contraseña</span>
-            </button>
             <button mat-menu-item [routerLink]="['']">
               <mat-icon class="icono">logout</mat-icon>
               <span>Salir</span>
@@ -143,8 +124,9 @@
       </div> 
 
     </mat-toolbar>
-    <div [@routeAnimations]="prepareRoute(outlet)">
+    <!-- <div [@routeAnimations]="prepareRoute(outlet)">
       <router-outlet #outlet="outlet"></router-outlet>
-    </div>
+    </div> -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

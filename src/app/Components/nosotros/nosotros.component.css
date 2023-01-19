@@ -23,9 +23,11 @@
     border: none;
 }
  
-.caja-media{
+.caja-media, .caja-ubicacion {
     display: flex;
     justify-content: center;
+    height: 34rem;
+    margin-bottom: 1.4rem;
 }
 
 .title{
@@ -48,8 +50,105 @@
     text-align: justify;
 }
 
+.b-facebook{
+    background: #1877f2;
+    color: white;
+}
+
+.b-instagram{
+    background: #E1306C;
+    color: white;
+}
+
+.b-twitter{
+    background: #00acee;
+    color: white;
+}
+
 .texto-dos{
     width: 35%;
+}
+
+.tab-content{
+    width: 25%;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: var(--VerdeOscuro);
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: var(--VerdeMedio);
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: var(--VerdeOscuro);
+}
+
+.dos{
+    width: 50%;
+}
+
+.dos:active{
+    transform: scale(.98);
+}
+
+.dos{
+    border: 1px solid var(--VerdeOscuro);
+}
+
+.dos:hover{
+    background-color: var(--VerdeMedio);
+    border: 1px solid var(--VerdeMedio);
+    box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 4px 21px -6px rgba(0,0,0,0.55);
+}
+
+.custom-shape-divider-top-1674080847 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1674080847 svg {
+    position: relative;
+    display: block;
+    width: calc(102% + 1.3px);
+    height: 263px;
+}
+
+.custom-shape-divider-top-1674080847 .shape-fill {
+    fill: #AED36C;
+}
+
+.custom-shape-divider-bottom-1674084601 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1674084601 svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 204px;
+}
+
+.custom-shape-divider-bottom-1674084601 .shape-fill {
+    fill: #AED36C;
+}
+
+.contactos-ubicacion{
+    text-align: justify;
+    font-weight: 500;
 }
 
 .caja-2{

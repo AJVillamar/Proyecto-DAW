@@ -3,7 +3,7 @@
 		<div class="picsum-img-wrapper">
 			<img src="assets/img/Slider/Slider-Banner1.svg" class="w-100 caja-img "/>
 		</div>
-		<div class="carousel-caption carousel_uno">
+		<a class="carousel-caption carousel_uno" href="https://www.expreso.ec/guayaquil/200-mil-animales-abandonados-deambulan-132914.html" target="_blank">
             <mat-icon 
 			ngbPopover="Infórmate"
 			[openDelay]="100"
@@ -11,13 +11,13 @@
 			triggers="mouseenter:mouseleave">
                 link
             </mat-icon>
-		</div>
+		</a>
 	</ng-template>
 	<ng-template ngbSlide>
 		<div class="picsum-img-wrapper">
 			<img src="assets/img/Slider/Slider-Banner2.svg" class="w-100 caja-img" />
 		</div>
-		<div class="carousel-caption carousel_dos">
+		<div class="carousel-caption carousel_dos" [routerLink]="['/listar']">
             <mat-icon
 			ngbPopover="Adopta"		
 			[openDelay]="100"
@@ -32,7 +32,7 @@
 		<div class="picsum-img-wrapper">
 			<img src="assets/img/Slider/Slider-Banner3.svg" class="w-100 caja-img" />
 		</div>
-		<div class="carousel-caption carousel_tres">
+		<div class="carousel-caption carousel_tres" [routerLink]="['/donacion']">
             <mat-icon 
 				ngbPopover="Donaciones"		
 				[openDelay]="100"
