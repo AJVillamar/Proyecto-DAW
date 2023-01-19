@@ -32,8 +32,8 @@ export class InformacionAnimalComponent {
   openSolicitud(){
     this.dialog.open(SolicitudAnimalComponent,{
       autoFocus: false,
-      width: '52%',
-      height: '480px',
+      width: '57%',
+      height: '520px',
       data: this.animal
     }).afterClosed().subscribe(
       (resultado) => {
