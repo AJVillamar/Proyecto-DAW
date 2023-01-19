@@ -6,10 +6,10 @@
     <p><strong>Animal: </strong>{{data.animal}}</p>
     <p><strong>Raza: </strong>{{data.raza}}</p>
     <p><strong>Sexo: </strong>{{data.sexo}}</p>
-    <p *ngIf="data.estado==1"><strong>Razón: </strong>Acoger a {{data.nombre}}.</p>
-    <p *ngIf="data.estado==2"><strong>Razón: </strong>Maltrato.</p>
-    <p *ngIf="data.estado==3 || data.estado==4"><strong>Razón: </strong>Atención a emergencia veterinaria urgente.</p>
-    <p *ngIf="data.estado==5">{{data.nombre}} ha sido rescatado(a).</p>
+    <p *ngIf="data.estado=='Callejero'"><strong>Razón: </strong>Acoger a {{data.nombre}}.</p>
+    <p *ngIf="data.estado=='Maltrato'"><strong>Razón: </strong>Maltrato.</p>
+    <p *ngIf="data.estado=='Accidente' || data.estado=='Grave'"><strong>Razón: </strong>Atención a emergencia veterinaria urgente.</p>
+    <p *ngIf="data.estado=='Rescatado(a)'">{{data.nombre}} ha sido rescatado(a).</p>
     <mat-divider></mat-divider>
     <p><strong>Descripción del caso: </strong></p>
     <p>{{data.descripcion}}</p>
