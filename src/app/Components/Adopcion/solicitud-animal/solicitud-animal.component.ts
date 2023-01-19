@@ -67,7 +67,7 @@ export class SolicitudAnimalComponent implements OnInit {
       correo: this.form.value.correo,
       telefono: this.form.value.telefono,
       direccion: this.form.value.direccion,
-      estado: "Esperando",
+      estado: "Pendiente",
       fechaNac: this.data.fechaNac,
       fechaReg: new Date().toLocaleDateString(),
       idAnimal: this.data.id,
